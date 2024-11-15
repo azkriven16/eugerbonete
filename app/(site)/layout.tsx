@@ -5,7 +5,7 @@ import AnimatedCursor from "react-animated-cursor";
 
 export default function Layout({ children }: PropsWithChildren) {
     return (
-        <div>
+        <>
             <Navbar />
             {children}
             <Footer />
@@ -17,6 +17,6 @@ export default function Layout({ children }: PropsWithChildren) {
                 innerScale={0.7}
                 outerScale={5}
             />
-        </div>
+        </>
     );
 }
