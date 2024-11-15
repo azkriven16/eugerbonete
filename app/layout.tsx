@@ -27,7 +27,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased container max-w-screen-lg px-4 py-5 mx-auto`}
+                className={`${geistSans.variable} ${geistMono.variable} antialiased container max-w-screen-lg m-4 mx-auto`}
             >
                 <ThemeProvider
                     attribute="class"

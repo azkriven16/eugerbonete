@@ -1,44 +1,43 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
+import { badgeVariants } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
     Card,
     CardContent,
-    CardDescription,
     CardFooter,
     CardHeader,
-    CardTitle,
 } from "@/components/ui/card";
-import { Map, MapPin } from "lucide-react";
-import React from "react";
+import { cn } from "@/lib/utils";
 
 export default function page() {
     return (
-        <main className="min-h-screen my-10">
+        <main className="min-h-screen my-10 mx-4">
             <Card className="border-none space-y-10">
                 <CardHeader className="p-0 m-0">
                     <h1 className="text-5xl md:text-8xl font-bold font-sans">
                         Hi. I'm Euger Bonete A web developer
                     </h1>
                 </CardHeader>
-                <CardContent className="flex items-center p-0 m-0">
+                <CardContent className="flex flex-col md:flex-row gap-5 items-center p-0 m-0">
                     <p className="text-xl text-muted-foreground">
                         Designing and
-                        <span>
-                            <Badge
-                                variant="secondary"
-                                className="text-xl rounded-full"
-                            >
-                                developing
-                            </Badge>
+                        <span
+                            className={cn(
+                                badgeVariants({ variant: "secondary" }),
+                                "text-xl rounded-full"
+                            )}
+                        >
+                            developing
                         </span>
                         interactive, visually captivating
-                        <Badge
-                            variant="secondary"
-                            className="text-xl rounded-full"
+                        <span
+                            className={cn(
+                                badgeVariants({ variant: "secondary" }),
+                                "text-xl rounded-full"
+                            )}
                         >
                             websites
-                        </Badge>
+                        </span>
                         that focus on usability, performance, and overall user
                         satisfaction.
                     </p>
