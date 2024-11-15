@@ -13,6 +13,11 @@ const geistMono = localFont({
     variable: "--font-geist-mono",
     weight: "100 300 600 800 900",
 });
+const bricolageGrotesque = localFont({
+    src: "./fonts/BricolageGrotesque_24pt-Bold.ttf",
+    variable: "--font-grotesque-bold",
+    weight: "100 300 600 800 900",
+});
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -27,7 +32,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased container max-w-screen-lg m-4 mx-auto`}
+                className={`${geistSans.variable} ${geistMono.variable} ${bricolageGrotesque.variable} antialiased container max-w-screen-lg m-4 mx-auto`}
             >
                 <ThemeProvider
                     attribute="class"

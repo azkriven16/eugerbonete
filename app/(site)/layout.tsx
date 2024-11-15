@@ -1,9 +1,9 @@
 "use client";
 
-import Footer from "@/components/footer";
-import { Navbar } from "@/components/navbar";
-import React, { PropsWithChildren, useEffect, useState } from "react";
+import { PropsWithChildren, useEffect, useState } from "react";
 import AnimatedCursor from "react-animated-cursor";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 
 export default function Layout({ children }: PropsWithChildren) {
     const [isMounted, setIsMounted] = useState(false);
@@ -21,14 +21,16 @@ export default function Layout({ children }: PropsWithChildren) {
             <Navbar />
             {children}
             <Footer />
-            <AnimatedCursor
-                innerSize={16}
-                outerSize={8}
-                color="128, 128, 128"
-                outerAlpha={0.2}
-                innerScale={0.7}
-                outerScale={5}
-            />
+            <div className="hidden md:block">
+                <AnimatedCursor
+                    innerSize={16}
+                    outerSize={8}
+                    color="128, 128, 128"
+                    outerAlpha={0.2}
+                    innerScale={0.7}
+                    outerScale={5}
+                />
+            </div>
         </>
     );
 }
