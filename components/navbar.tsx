@@ -7,15 +7,10 @@ import { ModeToggle } from "./theme-toggle";
 import { buttonVariants } from "./ui/button";
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import { Menu } from "lucide-react";
+import { navItems } from "@/lib/constants";
 
 export const Navbar = () => {
     const [open, setOpen] = useState(false);
-
-    const navItems = [
-        { href: "/", label: "Home" },
-        { href: "/about", label: "About" },
-        { href: "/work", label: "Work" },
-    ];
 
     return (
         <nav className="flex items-center justify-between mx-4">
