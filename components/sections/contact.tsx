@@ -1,25 +1,19 @@
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { socials } from "@/config/socials";
 
 export const Contact = () => {
     return (
         <section>
             <Card>
                 <CardHeader>
-                    <CardTitle className="text-2xl md:text-4xl font-sans border-b pb-5">
+                    <CardTitle className="text-2xl md:text-4xl font-sans border-b">
                         Contact
                     </CardTitle>
                 </CardHeader>
                 <CardContent>
                     <div className="flex flex-col md:flex-row justify-between gap-5 md:gap-20">
                         <div>
-                            <p className="text-3xl md:text-7xl">
+                            <p className="text-3xl md:text-7xl font-bold">
                                 Let's work together
                             </p>
                         </div>
@@ -34,7 +28,7 @@ export const Contact = () => {
                                 thrilling adventure together!
                             </p>
                             <p className="underline text-xl md:text-3xl mt-5">
-                                azkriven16@gmail.com
+                                {socials.email}
                             </p>
                         </div>
                     </div>

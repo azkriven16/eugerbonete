@@ -12,11 +12,11 @@ export const Works = () => {
         <section>
             <Card>
                 <CardHeader>
-                    <CardTitle className="text-4xl font-sans">
-                        My Works
+                    <CardTitle className="text-2xl md:text-4xl font-sans border-b">
+                        Works
                     </CardTitle>
                 </CardHeader>
-                <CardContent></CardContent>
+                <CardContent>some stuff</CardContent>
             </Card>
         </section>
     );

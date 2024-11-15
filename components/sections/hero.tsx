@@ -12,19 +12,19 @@ import { cn } from "@/lib/utils";
 export const Hero = () => {
     return (
         <section>
-            <Card className="border-none space-y-10">
-                <CardHeader className="p-0 m-0">
+            <Card className="border-none shadow-none space-y-10">
+                <CardHeader>
                     <h1 className="text-5xl md:text-8xl font-bold font-sans">
                         Hi. I'm Euger Bonete A web developer
                     </h1>
                 </CardHeader>
-                <CardContent className="flex flex-col md:flex-row gap-5 items-center p-0 m-0">
-                    <p className="text-xl text-muted-foreground">
+                <CardContent className="flex flex-col md:flex-row gap-5 items-center">
+                    <p className="text-xl text-muted-foreground leading-loose">
                         Designing and
                         <span
                             className={cn(
                                 badgeVariants({ variant: "secondary" }),
-                                "text-xl rounded-full"
+                                "text-xl rounded-full mx-0.5"
                             )}
                         >
                             developing
@@ -33,7 +33,7 @@ export const Hero = () => {
                         <span
                             className={cn(
                                 badgeVariants({ variant: "secondary" }),
-                                "text-xl rounded-full"
+                                "text-xl rounded-full mx-0.5"
                             )}
                         >
                             websites
