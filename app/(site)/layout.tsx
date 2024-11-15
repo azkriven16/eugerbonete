@@ -1,9 +1,21 @@
+"use client";
+
 import Footer from "@/components/footer";
 import { Navbar } from "@/components/navbar";
-import React, { PropsWithChildren } from "react";
+import React, { PropsWithChildren, useEffect, useState } from "react";
 import AnimatedCursor from "react-animated-cursor";
 
 export default function Layout({ children }: PropsWithChildren) {
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
+    if (!isMounted) {
+        return null;
+    }
+
     return (
         <>
             <Navbar />
