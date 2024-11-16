@@ -24,7 +24,7 @@ export const WorkCard = (data: WorkCardProps) => {
             viewport={{ once: true, amount: 0.2 }}
             variants={sectionVariants}
         >
-            <Card>
+            <Card className="">
                 <CardContent className="border">
                     <Image
                         src="/projects/nisuboard.png"

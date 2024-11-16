@@ -9,7 +9,7 @@ import { sectionVariants } from "@/lib/animations";
 
 export default function Page() {
     return (
-        <main className="min-h-screen my-10 space-y-52 mx-4">
+        <main className="min-h-screen my-10 space-y-32 mx-4">
             <motion.div
                 initial="hidden"
                 whileInView="visible"

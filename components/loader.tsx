@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
-import { Badge } from "@/components/ui/badge";
 
 export const Loader = () => {
     const { theme } = useTheme();
@@ -29,11 +28,6 @@ export const Loader = () => {
                 />
             </motion.svg>
             <p className="text-xl leading-loose text-center mt-10">
-                <span>
-                    <Badge variant={"secondary"}>ReactJS</Badge> ,{" "}
-                    <Badge variant={"secondary"}>Typescript</Badge> and{" "}
-                    <Badge variant={"secondary"}>NextJS</Badge>{" "}
-                </span>
                 web developer
             </p>
         </motion.div>
