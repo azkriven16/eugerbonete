@@ -32,7 +32,7 @@ export const Loader = () => {
                 <span>
                     <Badge variant={"secondary"}>ReactJS</Badge> ,{" "}
                     <Badge variant={"secondary"}>Typescript</Badge> and{" "}
-                    <Badge variant={"secondary"}>NextJS</Badge>
+                    <Badge variant={"secondary"}>NextJS</Badge>{" "}
                 </span>
                 web developer
             </p>
