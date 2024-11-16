@@ -6,6 +6,8 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
+import { works } from "@/config/works";
+import { WorkCard } from "../work-card";
 
 export const Works = () => {
     return (
@@ -16,7 +18,11 @@ export const Works = () => {
                         Works
                     </CardTitle>
                 </CardHeader>
-                <CardContent>some stuff</CardContent>
+                <CardContent className="space-y-20">
+                    {works.map((work) => (
+                        <WorkCard {...work} key={work.slug} />
+                    ))}
+                </CardContent>
             </Card>
         </section>
     );

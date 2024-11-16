@@ -5,18 +5,7 @@ import { About } from "@/components/sections/about";
 import { Contact } from "@/components/sections/contact";
 import { Hero } from "@/components/sections/hero";
 import { Works } from "@/components/sections/works";
-
-const sectionVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            duration: 0.6,
-            ease: "easeOut",
-        },
-    },
-};
+import { sectionVariants } from "@/lib/animations";
 
 export default function Page() {
     return (
