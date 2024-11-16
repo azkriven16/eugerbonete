@@ -43,6 +43,7 @@ export default function Layout({ children }: PropsWithChildren) {
                         outerAlpha={0.2}
                         innerScale={0.7}
                         outerScale={5}
+                        showSystemCursor
                     />
                 </div>
             </motion.div>

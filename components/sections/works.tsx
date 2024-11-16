@@ -18,7 +18,7 @@ export const Works = () => {
                         Works
                     </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-20">
+                <CardContent className="space-y-32">
                     {works.map((work) => (
                         <WorkCard {...work} key={work.slug} />
                     ))}

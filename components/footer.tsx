@@ -37,20 +37,6 @@ export const Footer = () => {
         <footer className="mx-4 pt-52 pb-20 relative">
             <div className="text-xl flex flex-col md:flex-row justify-between gap-10">
                 <p className="">© {site.author} Portfolio</p>
-
-                <ul className="flex gap-4 items-center">
-                    {navItems.map((item) => (
-                        <li key={item.href}>
-                            <Button
-                                asChild
-                                className="text-xl p-0"
-                                variant="linkHover1"
-                            >
-                                <Link href={item.href}>{item.label}</Link>
-                            </Button>
-                        </li>
-                    ))}
-                </ul>
             </div>
 
             <div className="mt-10 md:mt-32 flex flex-col-reverse md:flex-row justify-between gap-10">
