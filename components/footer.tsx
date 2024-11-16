@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
 import { SocialLinks } from "./socials";
 import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
 
 export const Footer = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -34,21 +35,27 @@ export const Footer = () => {
 
     return (
         <footer className="mx-4 pt-52 pb-20 relative">
-            <div className="text-xl flex flex-col md:flex-row items-center justify-between gap-10">
+            <div className="text-xl flex flex-col md:flex-row justify-between gap-10">
                 <p className="">© {site.author} Portfolio</p>
 
-                <ul className="flex space-x-4 items-center">
+                <ul className="flex gap-4 items-center">
                     {navItems.map((item) => (
                         <li key={item.href}>
-                            <Link href={item.href}>{item.label}</Link>
+                            <Button
+                                asChild
+                                className="text-xl p-0"
+                                variant="linkHover1"
+                            >
+                                <Link href={item.href}>{item.label}</Link>
+                            </Button>
                         </li>
                     ))}
                 </ul>
             </div>
 
-            <div className="mt-32 flex justify-between items-center">
+            <div className="mt-10 md:mt-32 flex flex-col-reverse md:flex-row justify-between gap-10">
                 <div>
-                    <p className="text-xl">
+                    <p className="text-xl leading-loose">
                         Built with{" "}
                         <span>
                             <Badge variant={"secondary"}>Next.js</Badge> ,{" "}

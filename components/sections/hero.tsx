@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 export const Hero = () => {
     return (
         <section>
-            <Card className="border-none shadow-none space-y-10">
+            <Card className="mt-10 md:mt-32">
                 <CardHeader>
                     <h1 className="text-5xl md:text-8xl font-bold font-sans">
                         Hi. I'm Euger Bonete A web developer
@@ -48,7 +48,11 @@ export const Hero = () => {
                     </Avatar>
                 </CardContent>
                 <CardFooter className="justify-center gap-2">
-                    <Button className="font-semibold" size="lg" variant="shine">
+                    <Button
+                        className="font-semibold"
+                        size="lg"
+                        variant="gooeyLeft"
+                    >
                         Let's Work Together
                     </Button>
                     <Button

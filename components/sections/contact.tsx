@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { socials } from "@/config/socials";
+import { ExternalLink } from "lucide-react";
 
 export const Contact = () => {
     return (
@@ -18,16 +19,15 @@ export const Contact = () => {
                             </p>
                         </div>
                         <div className="flex flex-col justify-between">
-                            <p className="text-base md:text-lg text-muted-foreground">
-                                I am fueled by new challenges and cutting-edge
-                                projects. If you need a committed and passionate
-                                digital designer to enhance your vision, look no
-                                further. Let's join forces to create memorable
-                                experiences that resonate and leave a lasting
-                                impression. Get in touch, and let's start this
-                                thrilling adventure together!
+                            <p className="text-xl text-muted-foreground leading-loose">
+                                I'm currently available for new work. Let me
+                                know if you're looking for a digital designer.
+                                Let’s create experiences that last!
                             </p>
                             <p className="underline text-xl md:text-3xl mt-5">
+                                <span>
+                                    <ExternalLink className="inline size-8 mr-2" />
+                                </span>
                                 {socials.email}
                             </p>
                         </div>

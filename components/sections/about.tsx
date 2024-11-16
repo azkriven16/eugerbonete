@@ -21,14 +21,14 @@ export const About = () => {
                             </Avatar>
                         </div>
                         <div className="flex flex-col justify-between gap-10">
-                            <div className="space-y-5">
-                                <p className="text-lg text-muted-foreground md:leading-relaxed">
+                            <div className="space-y-2">
+                                <p className="text-xl text-muted-foreground leading-loose">
                                     Let's join forces to create memorable
                                     experiences that resonate and leave a
                                     lasting impression. Get in touch, and let's
                                     start this thrilling adventure together!
                                 </p>
-                                <p className="text-lg text-muted-foreground md:leading-relaxed">
+                                <p className="text-xl text-muted-foreground leading-loose">
                                     Let's join forces to create memorable
                                     experiences that resonate and leave a
                                     lasting impression. Get in touch, and let's
