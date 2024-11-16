@@ -30,7 +30,7 @@ export default function Layout({ children }: PropsWithChildren) {
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.5 }}
+                transition={{ duration: 0.5, delay: 1 }}
             >
                 <Navbar />
                 {children}

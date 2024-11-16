@@ -5,7 +5,7 @@ import { ExternalLink } from "lucide-react";
 export const Contact = () => {
     return (
         <section>
-            <Card>
+            <Card className="bg-primary text-primary-foreground p-2">
                 <CardHeader>
                     <CardTitle className="text-2xl md:text-4xl font-sans border-b">
                         Contact
@@ -24,7 +24,7 @@ export const Contact = () => {
                                 know if you're looking for a digital designer.
                                 Let’s create experiences that last!
                             </p>
-                            <p className="underline text-xl md:text-3xl mt-5">
+                            <p className="underline text-center text-xl md:text-3xl my-5">
                                 <span>
                                     <ExternalLink className="inline size-8 mr-2" />
                                 </span>

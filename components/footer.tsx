@@ -34,21 +34,10 @@ export const Footer = () => {
     };
 
     return (
-        <footer className="mx-4 pt-52 pb-20 relative">
-            <div className="text-xl flex flex-col md:flex-row justify-between gap-10">
-                <p className="">© {site.author} Portfolio</p>
-            </div>
-
-            <div className="mt-10 md:mt-32 flex flex-col-reverse md:flex-row justify-between gap-10">
+        <footer className="mx-4 md:mt-52 py-16 relative bg-secondary text-secondary-foreground p-2 rounded-xl">
+            <div className="text-xl flex flex-col md:flex-row items-center justify-between gap-10">
                 <div>
-                    <p className="text-xl leading-loose">
-                        Built with{" "}
-                        <span>
-                            <Badge variant={"secondary"}>Next.js</Badge> ,{" "}
-                            <Badge variant={"secondary"}>Tailwind CSS</Badge>{" "}
-                            and <Badge variant={"secondary"}>shadcn-ui</Badge>
-                        </span>
-                    </p>
+                    <p className="">© {site.author} Portfolio</p>
                 </div>
                 <SocialLinks />
             </div>
