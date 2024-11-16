@@ -10,7 +10,7 @@ export const Loader = () => {
         <motion.div
             initial={{ opacity: 1 }}
             animate={{ opacity: 0 }}
-            transition={{ duration: 0.5, delay: 2 }}
+            transition={{ duration: 1, delay: 1 }}
             className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background m-4"
         >
             <motion.svg
@@ -25,7 +25,7 @@ export const Loader = () => {
                     strokeWidth="1"
                     initial={{ pathLength: 0 }}
                     animate={{ pathLength: 1 }}
-                    transition={{ duration: 2, ease: "easeInOut" }}
+                    transition={{ duration: 1, ease: "circIn" }}
                 />
             </motion.svg>
             <p className="text-xl leading-loose text-center mt-10">

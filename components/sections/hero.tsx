@@ -8,6 +8,7 @@ import {
     CardHeader,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { RainbowButton } from "../ui/rainbow-button";
 
 export const Hero = () => {
     return (
@@ -48,13 +49,9 @@ export const Hero = () => {
                     </Avatar>
                 </CardContent>
                 <CardFooter className="justify-center gap-2">
-                    <Button
-                        className="font-semibold"
-                        size="lg"
-                        variant="gooeyLeft"
-                    >
+                    <RainbowButton className="font-semibold">
                         Let's Work Together
-                    </Button>
+                    </RainbowButton>
                     <Button
                         className="font-semibold"
                         size="lg"

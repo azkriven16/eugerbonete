@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { ModeToggle } from "./theme-toggle";
-import { buttonVariants } from "./ui/button";
+import { ModeToggle } from "@/components/theme-toggle";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import { Menu } from "lucide-react";
 import { navItems } from "@/lib/constants";
@@ -18,10 +18,16 @@ export const Navbar = () => {
                 Euger Bonete Jr.
             </Link>
 
-            <ul className="hidden md:flex space-x-4 items-center">
+            <ul className="hidden md:flex space-x-5 items-center">
                 {navItems.map((item) => (
                     <li key={item.href}>
-                        <Link href={item.href}>{item.label}</Link>
+                        <Button
+                            asChild
+                            variant="linkHover2"
+                            className="text-base"
+                        >
+                            <Link href={item.href}>{item.label}</Link>
+                        </Button>
                     </li>
                 ))}
                 <li>

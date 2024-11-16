@@ -15,7 +15,7 @@ export default function Layout({ children }: PropsWithChildren) {
         setIsMounted(true);
         const timer = setTimeout(() => {
             setIsLoading(false);
-        }, 2500); // 2.5 seconds to account for fade-out animation
+        }, 1000);
 
         return () => clearTimeout(timer);
     }, []);
@@ -28,9 +28,9 @@ export default function Layout({ children }: PropsWithChildren) {
         <>
             {isLoading && <Loader />}
             <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 2.5 }}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.5 }}
             >
                 <Navbar />
                 {children}
