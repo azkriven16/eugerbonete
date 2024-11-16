@@ -5,6 +5,8 @@ import { navItems } from "@/lib/constants";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
+import { SocialLinks } from "./socials";
+import { Badge } from "./ui/badge";
 
 export const Footer = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -31,7 +33,7 @@ export const Footer = () => {
     };
 
     return (
-        <footer className="mx-4 py-52 relative">
+        <footer className="mx-4 pt-52 pb-20 relative">
             <div className="text-xl flex flex-col md:flex-row items-center justify-between gap-10">
                 <p className="">© {site.author} Portfolio</p>
 
@@ -42,6 +44,20 @@ export const Footer = () => {
                         </li>
                     ))}
                 </ul>
+            </div>
+
+            <div className="mt-32 flex justify-between items-center">
+                <div>
+                    <p className="text-xl">
+                        Built with{" "}
+                        <span>
+                            <Badge variant={"secondary"}>Next.js</Badge> ,{" "}
+                            <Badge variant={"secondary"}>Tailwind CSS</Badge>{" "}
+                            and <Badge variant={"secondary"}>shadcn-ui</Badge>
+                        </span>
+                    </p>
+                </div>
+                <SocialLinks />
             </div>
 
             {isVisible && (

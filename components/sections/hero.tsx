@@ -20,24 +20,22 @@ export const Hero = () => {
                 </CardHeader>
                 <CardContent className="flex flex-col md:flex-row gap-5 items-center">
                     <p className="text-xl text-muted-foreground leading-loose">
-                        Designing and
+                        Designing and{" "}
                         <span
                             className={cn(
-                                badgeVariants({ variant: "secondary" }),
-                                "text-xl rounded-full mx-0.5"
+                                badgeVariants({ variant: "secondary" })
                             )}
                         >
                             developing
-                        </span>
-                        interactive, visually captivating
+                        </span>{" "}
+                        interactive, visually captivating{" "}
                         <span
                             className={cn(
-                                badgeVariants({ variant: "secondary" }),
-                                "text-xl rounded-full mx-0.5"
+                                badgeVariants({ variant: "secondary" })
                             )}
                         >
                             websites
-                        </span>
+                        </span>{" "}
                         that focus on usability, performance, and overall user
                         satisfaction.
                     </p>

@@ -1,16 +1,7 @@
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import { Button } from "../ui/button";
-import { socials } from "@/config/socials";
-import { Facebook, Github, Linkedin } from "lucide-react";
-import Link from "next/link";
+import { SocialLinks } from "@/components/socials";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 
 export const About = () => {
     return (
@@ -57,25 +48,3 @@ export const About = () => {
         </section>
     );
 };
-
-function SocialLinks() {
-    return (
-        <div className="flex gap-x-5">
-            <Button asChild variant="ghost" size="icon">
-                <Link href={socials.facebook}>
-                    <Facebook className="size-7" />
-                </Link>
-            </Button>
-            <Button asChild variant="ghost" size="icon">
-                <Link href={socials.linkedin}>
-                    <Linkedin className="size-7" />
-                </Link>
-            </Button>
-            <Button asChild variant="ghost" size="icon">
-                <Link href={socials.github}>
-                    <Github className="size-7" />
-                </Link>
-            </Button>
-        </div>
-    );
-}
