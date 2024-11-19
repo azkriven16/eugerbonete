@@ -48,7 +48,7 @@ const NavItem = ({ href, label, icon }: NavItemProps) => {
 
 export const Navbar = () => {
     return (
-        <nav className="sticky top-10 w-fit mx-auto">
+        <nav className="sticky top-10 w-fit mx-auto z-50">
             <div className="bg-secondary rounded-2xl px-4 flex items-center gap-1">
                 <NavItem href="/" label="Home" icon={<Home />} />
                 <NavItem href="/projects" label="Projects" icon={<Folder />} />
