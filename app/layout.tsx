@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { Navbar } from "../components/navbar";
 
 import "./globals.css";
+import AnimatedCursor from "react-animated-cursor";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -30,7 +31,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased container max-w-screen-lg mx-auto`}
+                className={`${geistSans.variable} ${geistMono.variable} antialiased container px-4`}
             >
                 <ThemeProvider
                     attribute="class"
@@ -38,9 +39,15 @@ export default function RootLayout({
                     enableSystem
                     disableTransitionOnChange
                 >
+                    <AnimatedCursor
+                        showSystemCursor
+                        innerSize={20}
+                        outerSize={10}
+                        color="100,100,100"
+                    />
                     <TooltipProvider delayDuration={10}>
                         <Navbar />
-                        {children}
+                        <main className="py-20">{children}</main>
                     </TooltipProvider>
                 </ThemeProvider>
             </body>
