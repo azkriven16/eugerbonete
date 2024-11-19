@@ -1,5 +1,3 @@
-"use client";
-
 import { Contact } from "@/components/contact";
 import { Experience } from "@/components/experience";
 import { Hero } from "@/components/hero";

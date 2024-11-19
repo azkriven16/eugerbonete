@@ -36,8 +36,11 @@ export const experiences = [
 export const techStack = [
     "React",
     "Next.js",
-    "TypeScript",
+    "Typescript",
+    "Javascript",
     "Tailwind CSS",
+    "CSS",
+    "HTML",
     "Node.js",
     "Express",
     "MongoDB",

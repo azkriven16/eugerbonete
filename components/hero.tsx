@@ -15,7 +15,7 @@ export const Hero = () => {
             initial="hidden"
             animate={introInView ? "visible" : "hidden"}
             variants={containerVariants}
-            className="space-y-10"
+            className="space-y-5 md:space-y-10"
         >
             <motion.p
                 className="text-base md:text-xl leading-loose text-muted-foreground"

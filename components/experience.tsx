@@ -41,7 +41,7 @@ export const Experience = () => {
                 {experiences.map((experience, index) => (
                     <motion.div
                         key={index}
-                        className="space-y-4 relative"
+                        className="space-y-4 relative hover:border transition-all p-4 rounded-lg"
                         variants={workItemVariants}
                         onHoverStart={() => setHoveredExperience(index)}
                         onHoverEnd={() => setHoveredExperience(null)}
@@ -67,7 +67,7 @@ export const Experience = () => {
                             <h3 className="text-xl md:text-3xl font-semibold">
                                 {experience.role}, {experience.company}
                             </h3>
-                            <p className="text-lg leading-relaxed">
+                            <p className="text-muted-foreground md:text-balance leading-relaxed">
                                 {experience.description}
                             </p>
                         </motion.div>
