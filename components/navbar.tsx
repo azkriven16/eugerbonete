@@ -25,7 +25,11 @@ const NavItem = ({ href, label, icon }: NavItemProps) => {
     return (
         <Tooltip>
             <TooltipTrigger asChild>
-                <Button variant="ghost" size="icon" className="w-12 h-12">
+                <Button
+                    variant="ghost"
+                    size="icon"
+                    className="w-12 h-12 hover:bg-primary/30"
+                >
                     <Link
                         href={href}
                         className="flex items-center justify-center scale-125"
@@ -51,15 +55,15 @@ export const Navbar = () => {
         <nav className="sticky top-10 w-fit mx-auto z-50">
             <div className="bg-secondary rounded-2xl px-4 flex items-center gap-1">
                 <NavItem href="/" label="Home" icon={<Home />} />
-                <NavItem href="/projects" label="Projects" icon={<Folder />} />
+                <NavItem href="#projects" label="Projects" icon={<Folder />} />
                 <NavItem
-                    href="/experience"
+                    href="#experience"
                     label="Experience"
                     icon={<Briefcase />}
                 />
-                <NavItem href="/tools" label="Tools" icon={<Wrench />} />
+                <NavItem href="#techstack" label="Tools" icon={<Wrench />} />
                 <NavItem
-                    href="/thoughts"
+                    href="#contact"
                     label="Thoughts"
                     icon={<SquarePen />}
                 />

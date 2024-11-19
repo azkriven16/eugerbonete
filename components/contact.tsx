@@ -17,9 +17,10 @@ export const Contact = () => {
             initial="hidden"
             animate={collaborateInView ? "visible" : "hidden"}
             variants={containerVariants}
-            className="pt-24 space-y-8"
+            className="pt-24 space-y-8 scroll-mt-20"
+            id="contact"
         >
-            <div className="space-y-5">
+            <div className="space-y-5 mb-32">
                 <motion.h2
                     className="text-4xl md:text-7xl font-semibold"
                     variants={itemVariants}
@@ -37,6 +38,62 @@ export const Contact = () => {
                     possimus impedit quas totam, dignissimos voluptatibus natus
                     non officiis repellat consequatur aut? Nemo, eaque sed.
                 </motion.p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+                {/* Strategy Column */}
+                <div className="space-y-6">
+                    <div className="space-y-2">
+                        <span className="text-sm text-muted-foreground">
+                            01.
+                        </span>
+                        <h3 className="text-xl font-semibold tracking-tight">
+                            SOCIAL LINKS
+                        </h3>
+                    </div>
+                    <ul className="space-y-4 text-lg">
+                        <li>Business Analysis</li>
+                        <li>User Research</li>
+                        <li>Growth Strategy</li>
+                        <li>Product Management</li>
+                    </ul>
+                </div>
+
+                {/* Design Column */}
+                <div className="space-y-6">
+                    <div className="space-y-2">
+                        <span className="text-sm text-muted-foreground">
+                            02.
+                        </span>
+                        <h3 className="text-xl font-semibold tracking-tight">
+                            NAVIGATION
+                        </h3>
+                    </div>
+                    <ul className="space-y-4 text-lg">
+                        <li>User Experience Design</li>
+                        <li>Design Systems</li>
+                        <li>Brand Identity</li>
+                        <li>Motion Design</li>
+                    </ul>
+                </div>
+
+                {/* Development Column */}
+                <div className="space-y-6">
+                    <div className="space-y-2">
+                        <span className="text-sm text-muted-foreground">
+                            03.
+                        </span>
+                        <h3 className="text-xl font-semibold tracking-tight">
+                            OTHERS
+                        </h3>
+                    </div>
+                    <ul className="space-y-4 text-lg">
+                        <li>React</li>
+                        <li>Swift</li>
+                        <li>AWS</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
             </div>
 
             <motion.div

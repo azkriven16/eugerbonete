@@ -1,5 +1,9 @@
 "use client";
-import { techItemVariants, techStackVariants } from "@/lib/animations";
+import {
+    itemVariants,
+    techItemVariants,
+    techStackVariants,
+} from "@/lib/animations";
 import { techStack } from "@/lib/constants";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -17,7 +21,16 @@ export const TechStack = () => {
             initial="hidden"
             animate={techStackInView ? "visible" : "hidden"}
             variants={techStackVariants}
+            id="techstack"
+            className="scroll-mt-20"
         >
+            <motion.h2
+                className="text-2xl font-semibold text-muted-foreground flex items-center gap-2 mb-10"
+                variants={itemVariants}
+            >
+                <span className="text-sm">03</span>
+                Tools
+            </motion.h2>
             <motion.div
                 className="flex flex-wrap gap-2 md:gap-4"
                 variants={techStackVariants}

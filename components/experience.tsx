@@ -28,13 +28,14 @@ export const Experience = () => {
             initial="hidden"
             animate={workExperienceInView ? "visible" : "hidden"}
             variants={workExperienceVariants}
-            className="space-y-8"
+            className="space-y-8 scroll-mt-20"
+            id="experience"
         >
             <motion.h2
                 className="text-2xl font-semibold text-muted-foreground flex items-center gap-2"
                 variants={itemVariants}
             >
-                <span className="text-sm">02</span>
+                <span className="text-sm">01</span>
                 Work Experience
             </motion.h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 group">
