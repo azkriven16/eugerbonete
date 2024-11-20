@@ -5,21 +5,14 @@ import {
     techStackVariants,
 } from "@/lib/animations";
 import { techStack } from "@/lib/constants";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 export const TechStack = () => {
-    const techStackRef = useRef(null);
-    const techStackInView = useInView(techStackRef, {
-        once: true,
-        amount: 0.5,
-    });
-
     return (
         <motion.section
-            ref={techStackRef}
             initial="hidden"
-            animate={techStackInView ? "visible" : "hidden"}
+            whileInView="visible"
+            viewport={{ once: true }}
             variants={techStackVariants}
             id="techstack"
             className=""

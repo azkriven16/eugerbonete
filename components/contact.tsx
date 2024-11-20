@@ -1,21 +1,13 @@
 "use client";
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
 import { containerVariants, itemVariants } from "@/lib/animations";
+import { motion } from "framer-motion";
 
 export const Contact = () => {
-    const collaborateRef = useRef(null);
-
-    const collaborateInView = useInView(collaborateRef, {
-        once: true,
-        amount: 0.5,
-    });
-
     return (
         <motion.section
-            ref={collaborateRef}
             initial="hidden"
-            animate={collaborateInView ? "visible" : "hidden"}
+            whileInView="visible"
+            viewport={{ once: true }}
             variants={containerVariants}
             className="mt-24 space-y-8"
             id="contact"
