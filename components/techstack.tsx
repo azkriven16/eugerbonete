@@ -28,7 +28,7 @@ export const TechStack = () => {
                 className="text-2xl font-semibold text-muted-foreground flex items-center gap-2 mb-10"
                 variants={itemVariants}
             >
-                <span className="text-sm">03</span>
+                <span className="text-sm">04</span>
                 Tools
             </motion.h2>
             <motion.div

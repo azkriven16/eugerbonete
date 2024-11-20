@@ -13,21 +13,15 @@ import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 
 export const Experience = () => {
-    const workExperienceRef = useRef(null);
     const [hoveredExperience, setHoveredExperience] = useState<number | null>(
         null
     );
 
-    const workExperienceInView = useInView(workExperienceRef, {
-        once: true,
-        amount: 0.3,
-    });
-
     return (
         <motion.section
-            ref={workExperienceRef}
             initial="hidden"
-            animate={workExperienceInView ? "visible" : "hidden"}
+            whileInView="visible"
+            viewport={{ once: true }}
             variants={workExperienceVariants}
             className="space-y-8 "
             id="experience"

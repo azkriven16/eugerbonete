@@ -1,21 +1,15 @@
 "use client";
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
 import { containerVariants, itemVariants } from "@/lib/animations";
-import { Button } from "./ui/button";
+import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
-import Image from "next/image";
 import { RainbowButton } from "./ui/rainbow-button";
 
 export const Hero = () => {
-    const introRef = useRef(null);
-    const introInView = useInView(introRef, { once: true, amount: 0.5 });
-
     return (
         <motion.section
-            ref={introRef}
             initial="hidden"
-            animate={introInView ? "visible" : "hidden"}
+            whileInView="visible"
+            viewport={{ once: true }}
             variants={containerVariants}
             className="space-y-5 md:space-y-10 flex flex-col items-center justify-end"
         >

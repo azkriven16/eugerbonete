@@ -1,32 +1,26 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import {
     containerVariants,
     itemVariants,
     projectVariants,
 } from "@/lib/animations";
 import { projects } from "@/lib/constants";
-import { motion, useInView } from "framer-motion";
-import Image from "next/image";
-import { useRef, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 
 export const Projects = () => {
-    const caseStudiesRef = useRef(null);
     const [hoveredProject, setHoveredProject] = useState<number | null>(null);
-
-    const caseStudiesInView = useInView(caseStudiesRef, {
-        once: true,
-        amount: 0.3,
-    });
 
     return (
         <motion.section
-            ref={caseStudiesRef}
             initial="hidden"
-            animate={caseStudiesInView ? "visible" : "hidden"}
+            whileInView="visible"
+            viewport={{ once: true }}
             variants={containerVariants}
             className="space-y-8"
             id="projects"
@@ -38,7 +32,10 @@ export const Projects = () => {
                 <span className="text-sm">02</span>
                 Case Studies
             </motion.h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <motion.div
+                variants={projectVariants}
+                className="grid grid-cols-1 md:grid-cols-2 gap-6"
+            >
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}
@@ -87,7 +84,7 @@ export const Projects = () => {
                         </div>
                     </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </motion.section>
     );
 };

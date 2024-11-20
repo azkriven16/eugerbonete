@@ -1,3 +1,4 @@
+import { About } from "@/components/about";
 import { Contact } from "@/components/contact";
 import { Experience } from "@/components/experience";
 import { Hero } from "@/components/hero";
@@ -10,6 +11,7 @@ export default function Page() {
             <Hero />
             <Experience />
             <Projects />
+            <About />
             <TechStack />
             <Contact />
         </div>
