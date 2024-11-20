@@ -8,8 +8,8 @@ export default function Page() {
     return (
         <div className="space-y-24">
             <Hero />
-            <Projects />
             <Experience />
+            <Projects />
             <TechStack />
             <Contact />
         </div>

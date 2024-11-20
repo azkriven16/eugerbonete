@@ -11,6 +11,7 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export const Projects = () => {
     const caseStudiesRef = useRef(null);
@@ -60,7 +61,11 @@ export const Projects = () => {
                                 src={project.image}
                                 alt={project.title}
                                 fill
-                                className="object-cover"
+                                className={cn(
+                                    "object-contain group-hover:scale-105 transition-transform duration-300",
+                                    project.title === "Nisuboard" &&
+                                        "translate-y-10"
+                                )}
                             />
                         </div>
                         <div className="p-6 flex justify-between items-center">

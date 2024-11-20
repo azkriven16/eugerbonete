@@ -51,9 +51,9 @@ export const techStack = [
 
 export const projects = [
     {
-        title: "Huzl DeFi",
-        category: "Mobile App",
-        image: "https://framerusercontent.com/images/VGLBKngFsJ7zGKlgkMDWm5kcMk8.jpg?scale-down-to=1024",
+        title: "Nisuboard",
+        category: "PWA App",
+        image: "/nisuboard-mobile-portrait.png",
     },
     {
         title: "Badejo Template",
