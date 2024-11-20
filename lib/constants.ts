@@ -71,3 +71,57 @@ export const projects = [
         image: "https://framerusercontent.com/images/z1aDRot4Dnyoz1yPVQIRR10Co.jpg?scale-down-to=1024",
     },
 ];
+
+export const education = [
+    {
+        school: "Northern Iloilo State University",
+        award: "Bachelor of Science in Information Technology",
+        date: "2021 - 2025",
+        description:
+            "Pursuing a degree in Information Technology, focusing on computer science, software engineering, and database management.",
+        logo: "/logo/nisu.png",
+    },
+    {
+        school: "Iloilo King of Glory Christian Academy",
+        award: "High School Diploma",
+        date: "2017-2021",
+        description:
+            "Graduated under the STEM strand, building a strong foundation in science, technology, engineering, and mathematics to prepare for a career in IT.",
+        logo: "/logo/ikgca.png",
+    },
+    {
+        school: "Carles Central School",
+        award: "Elementary Certificate",
+        date: "2011-2017",
+        description:
+            "Completed elementary education with a focus on foundational academic skills.",
+        logo: "/logo/ccc.png",
+    },
+];
+
+export const certifications = [
+    {
+        title: "JavaScript",
+        description: "JavaScript Certification",
+        link: "#", // Add your actual link here
+        image: "/logo/testdome.svg",
+    },
+    {
+        title: "TypeScript",
+        description: "TypeScript Certification",
+        link: "#", // Add your actual link here
+        image: "/logo/testdome.svg",
+    },
+    {
+        title: "React",
+        description: "React Certification",
+        link: "#", // Add your actual link here
+        image: "/logo/testdome.svg",
+    },
+    {
+        title: "Internship",
+        description: "Internship Certification",
+        link: "#", // Add your actual link here
+        image: "/logo/digipay-logo.png",
+    },
+];

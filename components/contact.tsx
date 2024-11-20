@@ -14,6 +14,13 @@ export const Contact = () => {
         >
             <div className="space-y-5 mb-32">
                 <motion.h2
+                    className="text-2xl font-semibold text-muted-foreground flex items-center gap-2"
+                    variants={itemVariants}
+                >
+                    <span className="text-sm">07</span>
+                    Contact
+                </motion.h2>
+                <motion.h2
                     className="text-4xl md:text-7xl font-semibold"
                     variants={itemVariants}
                 >

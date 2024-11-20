@@ -1,19 +1,21 @@
 "use client";
-
-import { Button } from "@/components/ui/button";
 import {
-    containerVariants,
     itemVariants,
     projectVariants,
+    techItemVariants,
+    techStackVariants,
 } from "@/lib/animations";
-import { projects } from "@/lib/constants";
-import { cn } from "@/lib/utils";
+import { certifications, projects, techStack } from "@/lib/constants";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-import Image from "next/image";
+import { Tooltip, TooltipTrigger } from "./ui/tooltip";
+import { TooltipContent } from "@radix-ui/react-tooltip";
 import { useState } from "react";
+import Image from "next/image";
+import { cn } from "@/lib/utils";
+import { Button } from "./ui/button";
+import { ArrowRight } from "lucide-react";
 
-export const Projects = () => {
+export const Certifications = () => {
     const [hovered, setHovered] = useState<number | null>(null);
 
     return (
@@ -21,22 +23,22 @@ export const Projects = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={containerVariants}
-            className="space-y-8"
-            id="projects"
+            variants={techStackVariants}
+            id="techstack"
+            className=""
         >
             <motion.h2
-                className="text-2xl font-semibold text-muted-foreground flex items-center gap-2"
+                className="text-2xl font-semibold text-muted-foreground flex items-center gap-2 mb-10"
                 variants={itemVariants}
             >
-                <span className="text-sm">02</span>
-                Case Studies
+                <span className="text-sm">06</span>
+                Certifications
             </motion.h2>
             <motion.div
                 variants={projectVariants}
                 className="grid grid-cols-1 md:grid-cols-2 gap-6"
             >
-                {projects.map((project, index) => (
+                {certifications.map((cert, index) => (
                     <motion.div
                         key={index}
                         className="group relative rounded-3xl overflow-hidden bg-secondary/5 border border-secondary/10 transition-colors hover:bg-secondary/50 hover:border-secondary"
@@ -52,25 +54,21 @@ export const Projects = () => {
                             transition: "filter 0.3s ease-in-out",
                         }}
                     >
-                        <div className="aspect-[4/3] relative">
+                        <div className="h-20 w-20 relative mx-8">
                             <Image
-                                src={project.image}
-                                alt={project.title}
+                                src={cert.image}
+                                alt={cert.title}
                                 fill
-                                className={cn(
-                                    "object-contain group-hover:scale-105 transition-transform duration-300",
-                                    project.title === "Nisuboard" &&
-                                        "translate-y-10"
-                                )}
+                                className="object-contain group-hover:scale-105 transition-transform duration-300"
                             />
                         </div>
                         <div className="p-6 flex justify-between items-center">
                             <div>
                                 <h3 className="text-xl font-semibold">
-                                    {project.title}
+                                    {cert.title}
                                 </h3>
                                 <p className="text-muted-foreground">
-                                    {project.category}
+                                    {cert.description}
                                 </p>
                             </div>
                             <Button

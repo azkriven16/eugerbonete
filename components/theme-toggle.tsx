@@ -2,16 +2,16 @@
 
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import * as React from "react";
 
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
+import { useEffect, useState } from "react";
 
 export function ModeToggle() {
     const { theme, setTheme } = useTheme();
-    const [mounted, setMounted] = React.useState(false);
+    const [mounted, setMounted] = useState(false);
 
-    React.useEffect(() => {
+    useEffect(() => {
         setMounted(true);
     }, []);
 

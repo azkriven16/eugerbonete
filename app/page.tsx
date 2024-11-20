@@ -1,5 +1,7 @@
 import { About } from "@/components/about";
+import { Certifications } from "@/components/certifications";
 import { Contact } from "@/components/contact";
+import { Education } from "@/components/education";
 import { Experience } from "@/components/experience";
 import { Hero } from "@/components/hero";
 import { Projects } from "@/components/projects";
@@ -13,6 +15,8 @@ export default function Page() {
             <Projects />
             <About />
             <TechStack />
+            <Education />
+            <Certifications />
             <Contact />
         </div>
     );

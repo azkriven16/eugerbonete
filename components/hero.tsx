@@ -3,8 +3,19 @@ import { containerVariants, itemVariants } from "@/lib/animations";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { RainbowButton } from "./ui/rainbow-button";
+import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
+import { useEffect, useState } from "react";
 
 export const Hero = () => {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) {
+        return null;
+    }
     return (
         <motion.section
             initial="hidden"
@@ -69,10 +80,20 @@ export const Hero = () => {
             </motion.p>
 
             <motion.div variants={itemVariants}>
-                <RainbowButton>
-                    <Sparkles fill="" />
-                    Let's build something
-                </RainbowButton>
+                <Tooltip>
+                    <TooltipTrigger>
+                        <RainbowButton>
+                            <Sparkles fill="" />
+                            Let's build something
+                        </RainbowButton>
+                    </TooltipTrigger>
+                    <TooltipContent
+                        className="bg-secondary text-secondary-foreground"
+                        side="bottom"
+                    >
+                        Lets talk 😉
+                    </TooltipContent>
+                </Tooltip>
             </motion.div>
         </motion.section>
     );

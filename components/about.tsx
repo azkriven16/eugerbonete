@@ -28,7 +28,7 @@ export const About = () => {
                 I'm Euger Bonete
             </motion.h2>
             <motion.p
-                className="text-base md:text-lg leading-loose text-muted-foreground"
+                className="text-base md:text-xl leading-loose text-muted-foreground md:w-2/3"
                 variants={itemVariants}
             >
                 I'm Euger, a software engineer focused on building intuitive web
