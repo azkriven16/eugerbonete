@@ -10,6 +10,7 @@ import {
 import { experiences } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 export const Experience = () => {
     const workExperienceRef = useRef(null);
@@ -28,7 +29,7 @@ export const Experience = () => {
             initial="hidden"
             animate={workExperienceInView ? "visible" : "hidden"}
             variants={workExperienceVariants}
-            className="space-y-8 scroll-mt-20"
+            className="space-y-8 "
             id="experience"
         >
             <motion.h2
@@ -61,11 +62,19 @@ export const Experience = () => {
                         >
                             {experience.date}
                         </motion.p>
+                        {experience.logo && (
+                            <Image
+                                src={experience.logo}
+                                alt={experience.company}
+                                width={200}
+                                height={200}
+                            />
+                        )}
                         <motion.div
                             className="space-y-2"
                             variants={itemVariants}
                         >
-                            <h3 className="text-xl md:text-3xl font-semibold">
+                            <h3 className="text-lg md:text-xl font-semibold">
                                 {experience.role}, {experience.company}
                             </h3>
                             <p className="text-muted-foreground md:text-balance leading-relaxed">

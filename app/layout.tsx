@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import type { Metadata } from "next";
+import localFont from "next/font/local";
 import { Navbar } from "../components/navbar";
 
-import "./globals.css";
 import AnimatedCursor from "react-animated-cursor";
+import "./globals.css";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -42,12 +42,14 @@ export default function RootLayout({
                     enableSystem
                     disableTransitionOnChange
                 >
-                    <AnimatedCursor
-                        showSystemCursor
-                        innerSize={20}
-                        outerSize={10}
-                        color="100,100,100"
-                    />
+                    <div className="hidden md:block">
+                        <AnimatedCursor
+                            showSystemCursor
+                            innerSize={20}
+                            outerSize={10}
+                            color="100,100,100"
+                        />
+                    </div>
                     <TooltipProvider delayDuration={10}>
                         <Navbar />
                         <main className="py-20">{children}</main>

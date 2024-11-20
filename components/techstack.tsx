@@ -22,7 +22,7 @@ export const TechStack = () => {
             animate={techStackInView ? "visible" : "hidden"}
             variants={techStackVariants}
             id="techstack"
-            className="scroll-mt-20"
+            className=""
         >
             <motion.h2
                 className="text-2xl font-semibold text-muted-foreground flex items-center gap-2 mb-10"

@@ -27,7 +27,7 @@ export const Projects = () => {
             initial="hidden"
             animate={caseStudiesInView ? "visible" : "hidden"}
             variants={containerVariants}
-            className="space-y-8 scroll-mt-20"
+            className="space-y-8"
             id="projects"
         >
             <motion.h2

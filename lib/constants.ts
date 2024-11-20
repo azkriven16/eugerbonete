@@ -1,35 +1,33 @@
 export const experiences = [
     {
-        date: "SEP, 2023 - CURRENT",
-        role: "Product Designer",
-        company: "Oendo Studio",
+        date: "2024 - Present",
+        role: "Frontend Engineer Part Time",
+        company: "Rocketshyft",
         description:
-            "Reshaped the platform's user experience, making blockchain technology more accessible. My visionary approach and financial acumen converged seamlessly, creating intuitive interfaces for newcomers and advanced features for seasoned traders. By introducing intuitive interfaces and advanced features, I successfully contributed to making Coinbase more user-friendly, resulting in a 20% rise in overall customer satisfaction",
+            "Developed and maintained responsive React applications using Vite for faster development and build times. Implemented reusable UI components using the Material-UI (MUI) design system. Containerized frontend applications using Docker for consistent development and deployment environments.",
+        technologies: ["React", "Vite", "Material-UI", "Docker", "TypeScript"],
         link: "#",
+        logo: "/logo/rocketshyft.webp",
     },
     {
-        date: "JAN, 2022 - SEP, 2023",
-        role: "UX Designer",
-        company: "Genesis",
+        date: "2021",
+        role: "Frontend Engineer Intern",
+        company: "Digipay",
         description:
-            "Thrived in a fast-paced environment at Genesis, designing intuitive and user-centric products. Successfully streamlined complex functionalities and implemented innovative features, contributing to a 46% increase in user engagement. I thrived on working across diverse teams, successfully integrating user feedback and diverse perspectives into innovative design solutions.",
+            "Developed and maintained responsive web interfaces using React and modern frontend technologies. Collaborated with designers and backend teams to implement UI features based on Jira tickets. Participated in agile ceremonies and utilized project management tools for task tracking.",
+        technologies: ["React", "Sass", "Bootstrap", "Synesthesia"],
         link: "#",
+        logo: "/logo/digipay-logo.png",
     },
     {
-        date: "SEP, 2023 - CURRENT",
-        role: "Product Designer",
-        company: "Oendo Studio",
+        date: "2022",
+        role: "Web Developer",
+        company: "Synesthesia",
         description:
-            "Reshaped the platform's user experience, making blockchain technology more accessible. My visionary approach and financial acumen converged seamlessly, creating intuitive interfaces for newcomers and advanced features for seasoned traders. By introducing intuitive interfaces and advanced features, I successfully contributed to making Coinbase more user-friendly, resulting in a 20% rise in overall customer satisfaction",
+            "Built responsive websites using Bubble.io's no-code platform following client requirements. Collaborated with designers to accurately implement Figma designs into functional web pages. Customized Bubble.io components and workflows to match design specifications.",
+        technologies: ["Bubble.io", "Figma", "HTML", "CSS", "JavaScript"],
         link: "#",
-    },
-    {
-        date: "JAN, 2022 - SEP, 2023",
-        role: "UX Designer",
-        company: "Genesis",
-        description:
-            "Thrived in a fast-paced environment at Genesis, designing intuitive and user-centric products. Successfully streamlined complex functionalities and implemented innovative features, contributing to a 46% increase in user engagement. I thrived on working across diverse teams, successfully integrating user feedback and diverse perspectives into innovative design solutions.",
-        link: "#",
+        // logo: "/logo/rocketshyft.webp",
     },
 ];
 

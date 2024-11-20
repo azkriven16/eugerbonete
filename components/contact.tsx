@@ -17,7 +17,7 @@ export const Contact = () => {
             initial="hidden"
             animate={collaborateInView ? "visible" : "hidden"}
             variants={containerVariants}
-            className="pt-24 space-y-8 scroll-mt-20"
+            className="mt-24 space-y-8"
             id="contact"
         >
             <div className="space-y-5 mb-32">
@@ -33,14 +33,14 @@ export const Contact = () => {
                     className="text-base md:text-xl leading-loose text-muted-foreground md:w-2/3"
                     variants={itemVariants}
                 >
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Officia ratione molestias unde consectetur nobis fuga
-                    possimus impedit quas totam, dignissimos voluptatibus natus
-                    non officiis repellat consequatur aut? Nemo, eaque sed.
+                    I’m here to bring your ideas to life. Let’s collaborate to
+                    create something that drives results, engages your audience,
+                    and helps your business grow. Get in touch, and let's turn
+                    your vision into a reality!
                 </motion.p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 border-t-2 pt-10">
                 {/* Strategy Column */}
                 <div className="space-y-6">
                     <div className="space-y-2">
@@ -52,10 +52,10 @@ export const Contact = () => {
                         </h3>
                     </div>
                     <ul className="space-y-4 text-lg">
-                        <li>Business Analysis</li>
-                        <li>User Research</li>
-                        <li>Growth Strategy</li>
-                        <li>Product Management</li>
+                        <li>Facebook</li>
+                        <li>Github</li>
+                        <li>LinkedIn</li>
+                        <li>Email</li>
                     </ul>
                 </div>
 
@@ -70,10 +70,10 @@ export const Contact = () => {
                         </h3>
                     </div>
                     <ul className="space-y-4 text-lg">
-                        <li>User Experience Design</li>
-                        <li>Design Systems</li>
-                        <li>Brand Identity</li>
-                        <li>Motion Design</li>
+                        <li>Home</li>
+                        <li>Case Studies</li>
+                        <li>Experience</li>
+                        <li>About Me</li>
                     </ul>
                 </div>
 
@@ -88,61 +88,15 @@ export const Contact = () => {
                         </h3>
                     </div>
                     <ul className="space-y-4 text-lg">
-                        <li>React</li>
-                        <li>Swift</li>
-                        <li>AWS</li>
-                        <li>Python</li>
+                        <li>Certifications</li>
+                        <li>Education</li>
+                        <li>Hobbies</li>
                     </ul>
                 </div>
             </div>
-
-            <motion.div
-                className="flex flex-col space-y-8"
-                variants={itemVariants}
-            >
-                <div className="flex flex-wrap gap-6 text-muted-foreground">
-                    <motion.a
-                        href="#"
-                        className="hover:text-foreground transition-colors"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                        Behance
-                    </motion.a>
-                    <motion.a
-                        href="#"
-                        className="hover:text-foreground transition-colors"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                        Linkedin
-                    </motion.a>
-                    <motion.a
-                        href="#"
-                        className="hover:text-foreground transition-colors"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                        Email
-                    </motion.a>
-                    <motion.a
-                        href="#"
-                        className="hover:text-foreground transition-colors"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                        X
-                    </motion.a>
-                    <motion.a
-                        href="#"
-                        className="hover:text-foreground transition-colors"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                        Dribbble
-                    </motion.a>
-                </div>
-            </motion.div>
+            <div className="pt-20">
+                <p>Built and DESIGNED BY ME</p>
+            </div>
         </motion.section>
     );
 };
