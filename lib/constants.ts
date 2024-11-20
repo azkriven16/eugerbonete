@@ -19,16 +19,16 @@ export const experiences = [
         link: "#",
         logo: "/logo/digipay-logo.png",
     },
-    {
-        date: "2022",
-        role: "Web Developer",
-        company: "Synesthesia",
-        description:
-            "Built responsive websites using Bubble.io's no-code platform following client requirements. Collaborated with designers to accurately implement Figma designs into functional web pages. Customized Bubble.io components and workflows to match design specifications.",
-        technologies: ["Bubble.io", "Figma", "HTML", "CSS", "JavaScript"],
-        link: "#",
-        // logo: "/logo/rocketshyft.webp",
-    },
+    // {
+    //     date: "2022",
+    //     role: "Web Developer",
+    //     company: "Synesthesia",
+    //     description:
+    //         "Built responsive websites using Bubble.io's no-code platform following client requirements. Collaborated with designers to accurately implement Figma designs into functional web pages. Customized Bubble.io components and workflows to match design specifications.",
+    //     technologies: ["Bubble.io", "Figma", "HTML", "CSS", "JavaScript"],
+    //     link: "#",
+    //     // logo: "/logo/rocketshyft.webp",
+    // },
 ];
 
 export const techStack = [
