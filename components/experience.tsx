@@ -24,7 +24,7 @@ export const Experience = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={workExperienceVariants}
-            className="space-y-8 "
+            className="space-y-8"
             id="experience"
         >
             <Tooltip>
@@ -48,7 +48,7 @@ export const Experience = () => {
                 {experiences.map((experience, index) => (
                     <motion.div
                         key={index}
-                        className="space-y-4 relative hover:border transition-all p-4 rounded-lg"
+                        className="space-y-4 relative hover:bg-secondary/50 transition-all p-4 border rounded-lg"
                         variants={workItemVariants}
                         onHoverStart={() => setHoveredExperience(index)}
                         onHoverEnd={() => setHoveredExperience(null)}

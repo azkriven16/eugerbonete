@@ -22,7 +22,7 @@ export const Hero = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={containerVariants}
-            className="space-y-5 md:space-y-10 flex flex-col items-center justify-end"
+            className="space-y-5 md:space-y-10 flex flex-col items-center justify-center py-24"
         >
             <div className="relative">
                 {/* First heading */}

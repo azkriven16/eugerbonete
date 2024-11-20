@@ -33,7 +33,7 @@ export const Education = () => {
                             key={index}
                             onHoverStart={() => setHovered(index)}
                             onHoverEnd={() => setHovered(null)}
-                            className="space-y-4 relative hover:border transition-all p-4 rounded-lg"
+                            className="space-y-4 relative border hover:bg-secondary transition-all p-4 rounded-lg"
                             style={{
                                 filter:
                                     hovered !== null && hovered !== index
