@@ -24,6 +24,16 @@ export const Hero = () => {
             variants={containerVariants}
             className="space-y-5 md:space-y-10 flex flex-col items-center justify-center py-24"
         >
+            <div
+                className="absolute inset-0 -z-10 h-full w-full bg-background 
+    bg-[linear-gradient(to_right,#a8a8a8_1px,transparent_1px),linear-gradient(to_bottom,#a8a8a8_1px,transparent_1px)] 
+    bg-[size:2rem_2rem] 
+    dark:bg-[linear-gradient(to_right,#333_1px,transparent_1px),linear-gradient(to_bottom,#333_1px,transparent_1px)] 
+    dark:bg-[size:2rem_2rem]"
+            >
+                <div className="absolute bottom-0 left-0 right-0 top-0 bg-gradient-to-b from-transparent to-background"></div>
+            </div>
+
             <div className="relative">
                 {/* First heading */}
                 <motion.h1
