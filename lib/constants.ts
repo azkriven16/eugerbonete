@@ -6,7 +6,7 @@ export const experiences = [
         description:
             "Developed and maintained responsive React applications using Vite for faster development and build times. Implemented reusable UI components using the Material-UI (MUI) design system. Containerized frontend applications using Docker for consistent development and deployment environments.",
         technologies: ["React", "Vite", "Material-UI", "Docker", "TypeScript"],
-        link: "#",
+        link: "https://rocketshyft.com/",
         logo: "/logo/rocketshyft.webp",
     },
     {
@@ -16,7 +16,7 @@ export const experiences = [
         description:
             "Developed and maintained responsive web interfaces using React and modern frontend technologies. Collaborated with designers and backend teams to implement UI features based on Jira tickets. Participated in agile ceremonies and utilized project management tools for task tracking.",
         technologies: ["React", "Sass", "Bootstrap", "Synesthesia"],
-        link: "#",
+        link: "https://www.digipay.ph/",
         logo: "/logo/digipay-logo.png",
     },
     // {

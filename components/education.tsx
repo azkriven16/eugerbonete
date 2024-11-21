@@ -60,6 +60,9 @@ export const Education = () => {
                                 className="space-y-2"
                                 variants={itemVariants}
                             >
+                                <p className="text-muted-foreground md:text-balance leading-relaxed">
+                                    {education.school}
+                                </p>
                                 <h3 className="text-lg md:text-xl font-semibold">
                                     {education.award}
                                 </h3>

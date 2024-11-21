@@ -1,6 +1,8 @@
 "use client";
 import { containerVariants, itemVariants } from "@/lib/animations";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { Button } from "./ui/button";
 
 export const Contact = () => {
     return (
@@ -50,11 +52,35 @@ export const Contact = () => {
                             SOCIAL LINKS
                         </h3>
                     </div>
-                    <ul className="space-y-4 text-lg">
-                        <li>Facebook</li>
-                        <li>Github</li>
-                        <li>LinkedIn</li>
-                        <li>Email</li>
+                    <ul className="text-lg">
+                        <li>
+                            <LinkItem
+                                external
+                                href="https://www.facebook.com/euger.bonete.9"
+                                text="Facebook"
+                            />
+                        </li>
+                        <li>
+                            <LinkItem
+                                external
+                                href="https://github.com/azkriven16"
+                                text="Github"
+                            />
+                        </li>
+                        <li>
+                            <LinkItem
+                                external
+                                href="https://www.linkedin.com/in/euger-bonete/"
+                                text="LinkedIn"
+                            />
+                        </li>
+                        <li>
+                            <LinkItem
+                                external
+                                href="mailto:azkriven16"
+                                text="azkriven16@gmail.com"
+                            />
+                        </li>
                     </ul>
                 </div>
 
@@ -68,11 +94,19 @@ export const Contact = () => {
                             NAVIGATION
                         </h3>
                     </div>
-                    <ul className="space-y-4 text-lg">
-                        <li>Home</li>
-                        <li>Case Studies</li>
-                        <li>Experience</li>
-                        <li>About Me</li>
+                    <ul className="text-lg">
+                        <li>
+                            <LinkItem href="/" text="Home" />
+                        </li>
+                        <li>
+                            <LinkItem href="/projects" text="Case Studies" />
+                        </li>
+                        <li>
+                            <LinkItem href="/experience" text="Experience" />
+                        </li>
+                        <li>
+                            <LinkItem href="/about" text="About Me" />
+                        </li>
                     </ul>
                 </div>
 
@@ -83,13 +117,19 @@ export const Contact = () => {
                             03.
                         </span>
                         <h3 className="text-xl font-semibold tracking-tight">
-                            OTHERS
+                            PROJECTS
                         </h3>
                     </div>
-                    <ul className="space-y-4 text-lg">
-                        <li>Certifications</li>
-                        <li>Education</li>
-                        <li>Hobbies</li>
+                    <ul className="text-lg">
+                        <li>
+                            <LinkItem href="/about" text="Nisuboard" />
+                        </li>
+                        <li>
+                            <LinkItem href="/about" text="Budget Tracker" />
+                        </li>
+                        <li>
+                            <LinkItem href="/about" text="Anikumo" />
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -99,3 +139,25 @@ export const Contact = () => {
         </motion.section>
     );
 };
+
+function LinkItem({
+    href,
+    text,
+    external = false,
+}: {
+    href: string;
+    text: string;
+    external?: boolean;
+}) {
+    return (
+        <Button asChild variant="linkHover2" className="text-lg px-0">
+            <Link
+                href={href}
+                target={external ? "_blank" : "_self"}
+                className="h-full"
+            >
+                {text}
+            </Link>
+        </Button>
+    );
+}

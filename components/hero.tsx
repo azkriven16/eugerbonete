@@ -82,7 +82,7 @@ export const Hero = () => {
             <motion.div variants={itemVariants}>
                 <Tooltip>
                     <TooltipTrigger>
-                        <RainbowButton>
+                        <RainbowButton className="gap-3">
                             <Sparkles fill="" />
                             Let's build something
                         </RainbowButton>

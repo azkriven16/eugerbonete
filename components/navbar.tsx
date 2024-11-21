@@ -1,20 +1,11 @@
-import Link from "next/link";
-import {
-    Brain,
-    Briefcase,
-    Folder,
-    FolderGit2,
-    Home,
-    SquarePen,
-    User2,
-    Wrench,
-} from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
     Tooltip,
     TooltipContent,
     TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Button } from "@/components/ui/button";
+import { Briefcase, Folder, Home, User2 } from "lucide-react";
+import Link from "next/link";
 import { ModeToggle } from "./theme-toggle";
 
 interface NavItemProps {
@@ -30,11 +21,11 @@ const NavItem = ({ href, label, icon }: NavItemProps) => {
                 <Button
                     variant="ghost"
                     size="icon"
-                    className="w-12 h-12 hover:bg-primary/30"
+                    className="hover:bg-primary/30"
                 >
                     <Link
                         href={href}
-                        className="flex items-center justify-center scale-125 h-full w-full"
+                        className="flex items-center justify-center h-full w-full"
                     >
                         {icon}
                     </Link>
@@ -60,7 +51,7 @@ export const Navbar = () => {
                     label="Experience"
                     icon={<Briefcase />}
                 />
-                <NavItem href="/techstack" label="Me" icon={<User2 />} />
+                <NavItem href="/about" label="Me" icon={<User2 />} />
                 <ModeToggle />
             </div>
         </nav>
