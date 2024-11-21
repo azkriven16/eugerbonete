@@ -6,6 +6,7 @@ import { Navbar } from "../components/navbar";
 
 import AnimatedCursor from "react-animated-cursor";
 import "./globals.css";
+import { Footer } from "@/components/footer";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -53,6 +54,7 @@ export default function RootLayout({
                     <TooltipProvider delayDuration={10}>
                         <Navbar />
                         <main className="py-20">{children}</main>
+                        <Footer />
                     </TooltipProvider>
                 </ThemeProvider>
             </body>

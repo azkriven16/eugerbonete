@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import { Heading } from "./heading";
+import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 
 export const Education = ({ number }: { number: string }) => {
     const [hovered, setHovered] = useState<number | null>(null);
@@ -19,7 +20,17 @@ export const Education = ({ number }: { number: string }) => {
             id="contact"
         >
             <div className="space-y-5 mb-32">
-                <Heading number={number} text="Education" />
+                <Tooltip>
+                    <TooltipTrigger>
+                        <Heading number={number} text="Education" />
+                    </TooltipTrigger>
+                    <TooltipContent
+                        side="right"
+                        className="bg-secondary text-secondary-foreground"
+                    >
+                        My educational background
+                    </TooltipContent>
+                </Tooltip>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 group">
                     {education.map((education, index) => (

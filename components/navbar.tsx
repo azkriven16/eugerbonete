@@ -44,14 +44,26 @@ export const Navbar = () => {
     return (
         <nav className="sticky top-10 w-fit mx-auto z-50">
             <div className="bg-secondary rounded-2xl py-2 px-4 flex items-center gap-1">
-                <NavItem href="/" label="Home" icon={<Home />} />
-                <NavItem href="/projects" label="Projects" icon={<Folder />} />
+                <NavItem
+                    href="/"
+                    label="Home"
+                    icon={<Home className="p-0.5" />}
+                />
+                <NavItem
+                    href="/projects"
+                    label="Projects"
+                    icon={<Folder className="p-0.5" />}
+                />
                 <NavItem
                     href="/experience"
                     label="Experience"
-                    icon={<Briefcase />}
+                    icon={<Briefcase className="p-0.5" />}
                 />
-                <NavItem href="/about" label="Me" icon={<User2 />} />
+                <NavItem
+                    href="/about"
+                    label="Me"
+                    icon={<User2 className="p-0.5" />}
+                />
                 <ModeToggle />
             </div>
         </nav>

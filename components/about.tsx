@@ -2,6 +2,7 @@
 import { itemVariants, techStackVariants } from "@/lib/animations";
 import { motion } from "framer-motion";
 import { Heading } from "./heading";
+import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 
 export const About = ({ number }: { number: string }) => {
     return (
@@ -13,7 +14,17 @@ export const About = ({ number }: { number: string }) => {
             id="techstack"
             className="space-y-4"
         >
-            <Heading number={number} text="About Me" />
+            <Tooltip>
+                <TooltipTrigger>
+                    <Heading number={number} text="About Me" />
+                </TooltipTrigger>
+                <TooltipContent
+                    side="right"
+                    className="bg-secondary text-secondary-foreground"
+                >
+                    Some information about myself
+                </TooltipContent>
+            </Tooltip>
 
             <motion.h2
                 className="text-4xl md:text-7xl font-semibold"

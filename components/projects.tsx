@@ -14,6 +14,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Heading } from "./heading";
+import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 
 export const Projects = ({ number }: { number: string }) => {
     const [hovered, setHovered] = useState<number | null>(null);
@@ -27,7 +28,17 @@ export const Projects = ({ number }: { number: string }) => {
             className="space-y-4"
             id="projects"
         >
-            <Heading number={number} text="Case Studies" />
+            <Tooltip>
+                <TooltipTrigger>
+                    <Heading number={number} text="Case Studies" />
+                </TooltipTrigger>
+                <TooltipContent
+                    side="right"
+                    className="bg-secondary text-secondary-foreground"
+                >
+                    Projects i made in my free time
+                </TooltipContent>
+            </Tooltip>
             <motion.div
                 variants={projectVariants}
                 className="grid grid-cols-1 md:grid-cols-2 gap-6"

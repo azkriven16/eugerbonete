@@ -5,6 +5,7 @@ import { Sparkles } from "lucide-react";
 import { RainbowButton } from "./ui/rainbow-button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export const Hero = () => {
     const [mounted, setMounted] = useState(false);
@@ -32,6 +33,7 @@ export const Hero = () => {
     dark:bg-[size:2rem_2rem]"
             >
                 <div className="absolute bottom-0 left-0 right-0 top-0 bg-gradient-to-b from-transparent to-background"></div>
+                <div className="absolute bottom-0 left-0 right-0 top-0 bg-gradient-to-t from-transparent to-background"></div>
             </div>
 
             <div className="relative">
@@ -91,11 +93,13 @@ export const Hero = () => {
 
             <motion.div variants={itemVariants}>
                 <Tooltip>
-                    <TooltipTrigger>
-                        <RainbowButton className="gap-3">
-                            <Sparkles fill="" />
-                            Let's build something
-                        </RainbowButton>
+                    <TooltipTrigger asChild>
+                        <Link href="/contact">
+                            <RainbowButton className="gap-3">
+                                <Sparkles fill="" />
+                                Let's build something
+                            </RainbowButton>
+                        </Link>
                     </TooltipTrigger>
                     <TooltipContent
                         className="bg-secondary text-secondary-foreground"

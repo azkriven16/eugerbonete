@@ -46,7 +46,7 @@ export const Experience = ({ number }: { number: string }) => {
                     side="right"
                     className="bg-secondary text-secondary-foreground"
                 >
-                    Companies I worked for.
+                    Companies I Worked With
                 </TooltipContent>
             </Tooltip>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 group">

@@ -30,8 +30,8 @@ export function ModeToggle() {
                     size="icon"
                     className="scale-110 hover:bg-primary/30"
                 >
-                    <Sun className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                    <Moon className="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                    <Sun className="p-1 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                    <Moon className="p-1 absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
                     <span className="sr-only">Toggle theme</span>
                 </Button>
             </TooltipTrigger>

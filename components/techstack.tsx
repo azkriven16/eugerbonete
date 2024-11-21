@@ -7,6 +7,7 @@ import {
 import { techStack } from "@/lib/constants";
 import { motion } from "framer-motion";
 import { Heading } from "./heading";
+import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 
 export const TechStack = ({ number }: { number: string }) => {
     return (
@@ -18,7 +19,17 @@ export const TechStack = ({ number }: { number: string }) => {
             id="techstack"
             className="space-y-4"
         >
-            <Heading number={number} text="Tools" />
+            <Tooltip>
+                <TooltipTrigger>
+                    <Heading number={number} text="Technologies and Tools" />
+                </TooltipTrigger>
+                <TooltipContent
+                    side="right"
+                    className="bg-secondary text-secondary-foreground"
+                >
+                    Tools I use to build stuff
+                </TooltipContent>
+            </Tooltip>
 
             <motion.div
                 className="flex flex-wrap gap-2 md:gap-4 mt-4"

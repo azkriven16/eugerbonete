@@ -29,7 +29,17 @@ export const Certifications = ({ number }: { number: string }) => {
             id="techstack"
             className="space-y-4"
         >
-            <Heading number={number} text="Certifications" />
+            <Tooltip>
+                <TooltipTrigger>
+                    <Heading number={number} text="Certifications" />
+                </TooltipTrigger>
+                <TooltipContent
+                    side="right"
+                    className="bg-secondary text-secondary-foreground p-1 px-2 text-sm rounded-lg"
+                >
+                    Some certifications I've earned.
+                </TooltipContent>
+            </Tooltip>
             <motion.div
                 variants={projectVariants}
                 className="grid grid-cols-1 md:grid-cols-2 gap-6"
