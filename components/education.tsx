@@ -1,13 +1,12 @@
 "use client";
 import { containerVariants, itemVariants } from "@/lib/animations";
-import { education, experiences } from "@/lib/constants";
+import { education } from "@/lib/constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Button } from "./ui/button";
-import { ExternalLink } from "lucide-react";
 import { useState } from "react";
+import { Heading } from "./heading";
 
-export const Education = () => {
+export const Education = ({ number }: { number: string }) => {
     const [hovered, setHovered] = useState<number | null>(null);
 
     return (
@@ -16,17 +15,12 @@ export const Education = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={containerVariants}
-            className="mt-24 space-y-8"
+            className="mt-24 space-y-4"
             id="contact"
         >
             <div className="space-y-5 mb-32">
-                <motion.h2
-                    className="text-2xl font-semibold text-muted-foreground flex items-center gap-2"
-                    variants={itemVariants}
-                >
-                    <span className="text-sm">05</span>
-                    Education
-                </motion.h2>
+                <Heading number={number} text="Education" />
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 group">
                     {education.map((education, index) => (
                         <motion.div

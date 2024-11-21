@@ -4,8 +4,8 @@ import { Experience } from "@/components/experience";
 export default function ExperiencePage() {
     return (
         <div>
-            <Experience />
-            <Contact />
+            <Experience number="01" />
+            <Contact number="02" />
         </div>
     );
 }

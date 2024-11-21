@@ -11,13 +11,13 @@ export default function Page() {
     return (
         <div className="space-y-24">
             <Hero />
-            <Experience />
-            <Projects />
-            <About />
-            <TechStack />
-            <Education />
-            <Certifications />
-            <Contact />
+            <Experience number="01" />
+            <Projects number="02" />
+            <About number="03" />
+            <TechStack number="04" />
+            <Education number="05" />
+            <Certifications number="06" />
+            <Contact number="07" />
         </div>
     );
 }

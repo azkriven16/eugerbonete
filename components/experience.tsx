@@ -13,8 +13,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
+import { Heading } from "./heading";
 
-export const Experience = () => {
+export const Experience = ({ number }: { number: string }) => {
     const [hoveredExperience, setHoveredExperience] = useState<number | null>(
         null
     );
@@ -34,18 +35,12 @@ export const Experience = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={workExperienceVariants}
-            className="space-y-8"
+            className="space-y-4"
             id="experience"
         >
             <Tooltip>
                 <TooltipTrigger>
-                    <motion.h2
-                        className="text-2xl font-semibold text-muted-foreground flex items-center gap-2"
-                        variants={itemVariants}
-                    >
-                        <span className="text-sm">01</span>
-                        Work Experience
-                    </motion.h2>
+                    <Heading number={number} text="Work Experience" />
                 </TooltipTrigger>
                 <TooltipContent
                     side="right"

@@ -1,8 +1,9 @@
 "use client";
 import { itemVariants, techStackVariants } from "@/lib/animations";
 import { motion } from "framer-motion";
+import { Heading } from "./heading";
 
-export const About = () => {
+export const About = ({ number }: { number: string }) => {
     return (
         <motion.section
             initial="hidden"
@@ -12,13 +13,8 @@ export const About = () => {
             id="techstack"
             className="space-y-4"
         >
-            <motion.h2
-                className="text-2xl font-semibold text-muted-foreground flex items-center gap-2 mb-10"
-                variants={itemVariants}
-            >
-                <span className="text-sm">03</span>
-                About Me
-            </motion.h2>
+            <Heading number={number} text="About Me" />
+
             <motion.h2
                 className="text-4xl md:text-7xl font-semibold"
                 variants={itemVariants}
@@ -28,7 +24,7 @@ export const About = () => {
                 I'm Euger Bonete
             </motion.h2>
             <motion.p
-                className="text-base md:text-xl leading-loose text-muted-foreground md:w-2/3"
+                className="text-base md:text-xl leading-loose text-muted-foreground "
                 variants={itemVariants}
             >
                 I'm Euger, a software engineer focused on building intuitive web

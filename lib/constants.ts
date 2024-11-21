@@ -54,21 +54,33 @@ export const projects = [
         title: "Nisuboard",
         category: "PWA App",
         image: "/nisuboard-mobile-portrait.png",
+        link: "/projects/nisuboard",
+        description:
+            "Nisuboard is a boarding house mapping application that helps users find and explore available boarding houses in their area. Built with Next.js, Prisma, and TypeScript, it features user authentication via Clerk, and a responsive UI using Radix UI components and Tailwind CSS.",
     },
     {
         title: "Badejo Template",
         category: "Portfolio Template",
         image: "https://framerusercontent.com/images/z1aDRot4Dnyoz1yPVQIRR10Co.jpg?scale-down-to=1024",
+        link: "/projects/portfolio",
+        description:
+            "Nisuboard is a boarding house mapping application that helps users find and explore available boarding houses in their area. Built with Next.js, Prisma, and TypeScript, it features user authentication via Clerk, and a responsive UI using Radix UI components and Tailwind CSS.",
     },
     {
         title: "Huzl DeFi",
         category: "Mobile App",
         image: "https://framerusercontent.com/images/VGLBKngFsJ7zGKlgkMDWm5kcMk8.jpg?scale-down-to=1024",
+        link: "/projects/portfolio",
+        description:
+            "Nisuboard is a boarding house mapping application that helps users find and explore available boarding houses in their area. Built with Next.js, Prisma, and TypeScript, it features user authentication via Clerk, and a responsive UI using Radix UI components and Tailwind CSS.",
     },
     {
         title: "Badejo Template",
         category: "Portfolio Template",
         image: "https://framerusercontent.com/images/z1aDRot4Dnyoz1yPVQIRR10Co.jpg?scale-down-to=1024",
+        link: "/projects/budget-tracker",
+        description:
+            "Nisuboard is a boarding house mapping application that helps users find and explore available boarding houses in their area. Built with Next.js, Prisma, and TypeScript, it features user authentication via Clerk, and a responsive UI using Radix UI components and Tailwind CSS.",
     },
 ];
 
@@ -103,25 +115,25 @@ export const certifications = [
     {
         title: "JavaScript",
         description: "JavaScript Certification",
-        link: "#", // Add your actual link here
+        link: "https://www.testdome.com/certificates/530156ebb39f43c5a407bb157b414413",
         image: "/logo/testdome.svg",
     },
     {
         title: "TypeScript",
         description: "TypeScript Certification",
-        link: "#", // Add your actual link here
+        link: "https://www.testdome.com/certificates/b42958b8c828498782f72c304e0f7d24",
         image: "/logo/testdome.svg",
     },
     {
         title: "React",
         description: "React Certification",
-        link: "#", // Add your actual link here
+        link: "https://www.testdome.com/certificates/da2507e9432941068913931a9ce1dc47",
         image: "/logo/testdome.svg",
     },
     {
         title: "Internship",
         description: "Internship Certification",
-        link: "#", // Add your actual link here
+        link: "https://azkriven.vercel.app/cert.png",
         image: "/logo/digipay-logo.png",
     },
 ];

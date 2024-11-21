@@ -6,8 +6,9 @@ import {
 } from "@/lib/animations";
 import { techStack } from "@/lib/constants";
 import { motion } from "framer-motion";
+import { Heading } from "./heading";
 
-export const TechStack = () => {
+export const TechStack = ({ number }: { number: string }) => {
     return (
         <motion.section
             initial="hidden"
@@ -15,17 +16,12 @@ export const TechStack = () => {
             viewport={{ once: true }}
             variants={techStackVariants}
             id="techstack"
-            className=""
+            className="space-y-4"
         >
-            <motion.h2
-                className="text-2xl font-semibold text-muted-foreground flex items-center gap-2 mb-10"
-                variants={itemVariants}
-            >
-                <span className="text-sm">04</span>
-                Tools
-            </motion.h2>
+            <Heading number={number} text="Tools" />
+
             <motion.div
-                className="flex flex-wrap gap-2 md:gap-4"
+                className="flex flex-wrap gap-2 md:gap-4 mt-4"
                 variants={techStackVariants}
             >
                 {techStack.map((tech, index) => (

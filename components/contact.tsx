@@ -3,25 +3,20 @@ import { containerVariants, itemVariants } from "@/lib/animations";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { Heading } from "./heading";
 
-export const Contact = () => {
+export const Contact = ({ number }: { number: string }) => {
     return (
         <motion.section
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={containerVariants}
-            className="mt-24 space-y-8"
+            className="mt-24 space-y-4"
             id="contact"
         >
             <div className="space-y-5 mb-32">
-                <motion.h2
-                    className="text-2xl font-semibold text-muted-foreground flex items-center gap-2"
-                    variants={itemVariants}
-                >
-                    <span className="text-sm">07</span>
-                    Contact
-                </motion.h2>
+                <Heading number={number} text="Contact" />
                 <motion.h2
                     className="text-4xl md:text-7xl font-semibold"
                     variants={itemVariants}
@@ -31,7 +26,7 @@ export const Contact = () => {
                     Collaborate
                 </motion.h2>
                 <motion.p
-                    className="text-base md:text-xl leading-loose text-muted-foreground md:w-2/3"
+                    className="text-base md:text-xl leading-loose text-muted-foreground"
                     variants={itemVariants}
                 >
                     I’m here to bring your ideas to life. Let’s collaborate to
