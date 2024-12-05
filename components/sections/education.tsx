@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Education() {
     return (
-        <div className="space-y-8 px-4 md:px-6">
+        <div className="space-y-8 px-4 md:px-6 mx-auto max-w-4xl">
             <h2 className="text-md font-semibold text-center mb-5 uppercase">
                 My educational journey
             </h2>

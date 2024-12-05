@@ -41,7 +41,7 @@ export default function Certificates() {
     ];
 
     return (
-        <section className="min-h-[30rem]">
+        <section className="min-h-[30rem] max-w-4xl mx-auto">
             <h2 className="text-md font-semibold text-center mb-5 uppercase">
                 My certifications from various places
             </h2>
