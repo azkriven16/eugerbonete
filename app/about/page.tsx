@@ -1,17 +1,26 @@
-import { About } from "@/components/about";
-import { Certifications } from "@/components/certifications";
-import { Contact } from "@/components/contact";
-import { Education } from "@/components/education";
-import { TechStack } from "@/components/techstack";
+import { Contact } from "@/components/sections/contact";
+import { Projects } from "@/components/sections/projects";
+import SmoothScroll from "@/components/smooth-scroll";
+import { Hero } from "./_components/hero";
+import { Experience } from "../../components/sections/experience";
+import { TechStack } from "../../components/sections/techstack";
+import { Preloader } from "@/components/preloader";
+import Education from "@/components/sections/education";
+import Certificates from "@/components/sections/certificates";
 
-export default function AboutPage() {
+export default function About() {
     return (
-        <div className="space-y-32">
-            <About number="01" />
-            <TechStack number="02" />
-            <Certifications number="03" />
-            <Education number="04" />
-            <Contact number="05" />
-        </div>
+        <Preloader>
+            <SmoothScroll>
+                <main className="space-y-20 py-10">
+                    <Hero />
+                    <Experience />
+                    <TechStack />
+                    <Certificates />
+                    <Education />
+                    <Contact />
+                </main>
+            </SmoothScroll>
+        </Preloader>
     );
 }
