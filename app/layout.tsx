@@ -9,6 +9,7 @@ import { Navbar } from "@/components/navbar";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Footer from "@/components/footer";
 import AnimatedCursor from "react-animated-cursor";
+import { siteConfig } from "@/lib/site";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -25,9 +26,10 @@ const plus_kakarta_sans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: {
-        default: "Euger Bonete NISU | CICS Student Web Developer",
-        template: "%s - Euger Bonete NISU | Web Development Portfolio",
+        default: `${siteConfig.name} NISU | CICS Student Web Developer`,
+        template: "%s - ${siteConfig.name} NISU | Web Development Portfolio",
     },
+    metadataBase: new URL(siteConfig.url),
     description:
         "Web developer and NISU CICS student. Explore my portfolio of projects, skills, and technical expertise.",
     keywords: [
@@ -40,49 +42,32 @@ export const metadata: Metadata = {
         "web design",
         "full-stack development",
     ],
-    authors: [{ name: "Euger Bonete" }],
-    creator: "Euger Bonete",
-    publisher: "Euger Bonete",
+    authors: [
+        { name: `${siteConfig.name}`, url: "https://azkriven.vercel.app" },
+    ],
+    creator: `${siteConfig.name}`,
     openGraph: {
         type: "website",
         locale: "en_US",
-        url: "https://eugerbonete.vercel.app/",
-        title: "Euger Bonete - Web Developer Portfolio",
-        description:
-            "Web developer and NISU CICS student. Explore my portfolio of projects, skills, and technical expertise.",
-        siteName: "Euger Bonete Portfolio",
+        url: siteConfig.url,
+        title: siteConfig.name,
+        description: siteConfig.description,
+        siteName: siteConfig.name,
         images: [
             {
-                url: "https://eugerbonete.vercel.app/api/og",
+                url: siteConfig.ogImage,
                 width: 1200,
                 height: 630,
-                alt: "Euger Bonete - Web Development Portfolio",
+                alt: siteConfig.name,
             },
         ],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Euger Bonete - Web Developer Portfolio",
-        description:
-            "Passionate web developer and CICS student creating innovative digital solutions.",
-        images: ["https://eugerbonete.vercel.app/api/og"],
-    },
-    robots: {
-        index: true,
-        follow: true,
-        googleBot: {
-            index: true,
-            follow: true,
-            "max-video-preview": -1,
-            "max-image-preview": "large",
-            "max-snippet": -1,
-        },
-    },
-    alternates: {
-        canonical: "https://azkriven.vercel.app/",
-    },
-    verification: {
-        google: "your-google-site-verification-code",
+        title: siteConfig.name,
+        description: siteConfig.description,
+        images: [siteConfig.ogImage],
+        creator: "@azkriven16",
     },
 };
 
