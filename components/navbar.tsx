@@ -68,7 +68,14 @@ export const Navbar = () => {
                                     : "linkHover1"
                             }
                         >
-                            <Link href={link.href}>{link.text}</Link>
+                            <Link
+                                href={link.href}
+                                target={
+                                    link.text === "Resume" ? "_blank" : "_self"
+                                }
+                            >
+                                {link.text}
+                            </Link>
                         </Button>
                     ))}
                 </nav>

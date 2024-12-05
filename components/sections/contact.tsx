@@ -19,7 +19,12 @@ export function Contact() {
                         </p>
                     </div>
                     <div className="flex gap-5">
-                        <Link href="#" className="group" prefetch={false}>
+                        <Link
+                            href="https://www.facebook.com/euger.bonete.9"
+                            target="_blank"
+                            className="group"
+                            prefetch={false}
+                        >
                             <div className="bg-background rounded-full p-3 flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
                                 <FacebookIcon className="w-6 h-6" />
                             </div>
@@ -27,7 +32,12 @@ export function Contact() {
                                 Facebook
                             </div>
                         </Link>
-                        <Link href="#" className="group" prefetch={false}>
+                        <Link
+                            href="https://www.linkedin.com/in/euger-bonete/"
+                            target="_blank"
+                            className="group"
+                            prefetch={false}
+                        >
                             <div className="bg-background rounded-full p-3 flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
                                 <LinkedinIcon className="w-6 h-6" />
                             </div>
@@ -35,7 +45,12 @@ export function Contact() {
                                 LinkedIn
                             </div>
                         </Link>
-                        <Link href="#" className="group" prefetch={false}>
+                        <Link
+                            href="https://github.com/azkriven16/"
+                            target="_blank"
+                            className="group"
+                            prefetch={false}
+                        >
                             <div className="bg-background rounded-full p-3 flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
                                 <GithubIcon className="w-6 h-6" />
                             </div>
@@ -43,7 +58,12 @@ export function Contact() {
                                 GitHub
                             </div>
                         </Link>
-                        <Link href="#" className="group" prefetch={false}>
+                        <Link
+                            href="mailto:azkriven16"
+                            target="_blank"
+                            className="group"
+                            prefetch={false}
+                        >
                             <div className="bg-background rounded-full p-3 flex items-center justify-center transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
                                 <MailIcon className="w-6 h-6" />
                             </div>
