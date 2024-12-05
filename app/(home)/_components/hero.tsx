@@ -16,8 +16,29 @@ import Balancer from "react-wrap-balancer";
 
 export const Hero = () => {
     return (
-        <div className="relative h-screen w-full overflow-hidden md:pt-20">
+        <div className="relative min-h-screen w-full overflow-hidden md:pt-20">
             <motion.div className="relative z-10 flex flex-col gap-5 justify-center items-center h-full text-center px-4">
+                <TooltipProvider>
+                    <Tooltip>
+                        <TooltipTrigger>
+                            <motion.div
+                                initial={{ y: -50, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                transition={{ delay: 0.2, duration: 0.5 }}
+                            >
+                                <Avatar className="h-20 w-20">
+                                    <AvatarImage
+                                        src="/me2.jpg"
+                                        alt="@azkriven16"
+                                        className="object-cover"
+                                    />
+                                    <AvatarFallback>EB</AvatarFallback>
+                                </Avatar>
+                            </motion.div>
+                        </TooltipTrigger>
+                        <TooltipContent>Hello there! 👋</TooltipContent>
+                    </Tooltip>
+                </TooltipProvider>
                 {/* Subtitle */}
                 <div className="overflow-hidden flex flex-col-reverse items-center gap-2">
                     <motion.p
