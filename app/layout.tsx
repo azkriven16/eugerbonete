@@ -46,14 +46,14 @@ export const metadata: Metadata = {
     openGraph: {
         type: "website",
         locale: "en_US",
-        url: "https://azkriven.vercel.app/",
+        url: "https://eugerbonete.vercel.app/",
         title: "Euger Bonete - Web Developer Portfolio",
         description:
             "Web developer and NISU CICS student. Explore my portfolio of projects, skills, and technical expertise.",
         siteName: "Euger Bonete Portfolio",
         images: [
             {
-                url: "/og-image.jpg",
+                url: "https://eugerbonete.vercel.app/api/og",
                 width: 1200,
                 height: 630,
                 alt: "Euger Bonete - Web Development Portfolio",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
         title: "Euger Bonete - Web Developer Portfolio",
         description:
             "Passionate web developer and CICS student creating innovative digital solutions.",
-        images: ["/twitter-image.jpg"],
+        images: ["https://eugerbonete.vercel.app/api/og"],
     },
     robots: {
         index: true,
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
         },
     },
     alternates: {
-        canonical: "https://eugerbonete.vercel.app/",
+        canonical: "https://azkriven.vercel.app/",
     },
     verification: {
         google: "your-google-site-verification-code",
