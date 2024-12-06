@@ -45,6 +45,9 @@ export const metadata: Metadata = {
     authors: [
         { name: `${siteConfig.name}`, url: "https://azkriven.vercel.app" },
     ],
+    icons: {
+        icon: "/icon.svg",
+    },
     creator: `${siteConfig.name}`,
     openGraph: {
         type: "website",
@@ -93,20 +96,22 @@ export default function RootLayout({
                     <ScrollProgressBar type="bar" />
                     <Toaster />
                     <ChatBot />
-                    <AnimatedCursor
-                        innerSize={8}
-                        outerSize={35}
-                        innerScale={1}
-                        outerScale={2}
-                        outerAlpha={0}
-                        innerStyle={{
-                            backgroundColor: "var(--cursor-color)",
-                        }}
-                        outerStyle={{
-                            border: "3px solid var(--cursor-color)",
-                        }}
-                        showSystemCursor
-                    />
+                    <div className="hidden md:block">
+                        <AnimatedCursor
+                            innerSize={8}
+                            outerSize={35}
+                            innerScale={1}
+                            outerScale={2}
+                            outerAlpha={0}
+                            innerStyle={{
+                                backgroundColor: "var(--cursor-color)",
+                            }}
+                            outerStyle={{
+                                border: "3px solid var(--cursor-color)",
+                            }}
+                            showSystemCursor
+                        />
+                    </div>
                 </ThemeProvider>
             </body>
         </html>
