@@ -28,8 +28,9 @@ export const Hero = () => {
                             >
                                 <Avatar className="h-20 w-20">
                                     <AvatarImage
-                                        src="https://github.com/htxmlx.png"
+                                        src="/me2.jpg"
                                         alt="@azkriven16"
+                                        className="object-cover"
                                     />
                                     <AvatarFallback>EB</AvatarFallback>
                                 </Avatar>
@@ -65,10 +66,9 @@ export const Hero = () => {
                             <WordRotate
                                 words={[
                                     "Worked with 2 companies 🏢, 1+ year of experience 📅.",
-                                    "Proficient in React ⚛️, Next.js 🌐, and TypeScript 🛠️.",
                                     "Currently a student 🎓, graduating in 2025 🎉.",
-                                    "Passionate about crafting efficient ⚙️ and scalable solutions 🚀.",
-                                    "Always learning 📚 and improving as a developer 🔥.",
+                                    "Enjoys reading manga and novels 📖.",
+                                    "Avid gamer when not working 🎮.",
                                 ]}
                             />
                         </Balancer>

@@ -16,8 +16,8 @@ import Balancer from "react-wrap-balancer";
 
 export const Hero = () => {
     return (
-        <div className="relative min-h-screen w-full overflow-hidden md:pt-20">
-            <motion.div className="relative z-10 flex flex-col gap-5 justify-center items-center h-full text-center px-4">
+        <div className="relative h-screen w-full overflow-hidden md:pt-20">
+            <motion.div className="relative z-10 flex flex-col gap-2 justify-center items-center h-full text-center px-4">
                 <TooltipProvider>
                     <Tooltip>
                         <TooltipTrigger>
@@ -28,7 +28,7 @@ export const Hero = () => {
                             >
                                 <Avatar className="h-20 w-20">
                                     <AvatarImage
-                                        src="/me2.jpg"
+                                        src="https://github.com/htxmlx.png"
                                         alt="@azkriven16"
                                         className="object-cover"
                                     />
@@ -39,8 +39,8 @@ export const Hero = () => {
                         <TooltipContent>Hello there! 👋</TooltipContent>
                     </Tooltip>
                 </TooltipProvider>
-                {/* Subtitle */}
-                <div className="overflow-hidden flex flex-col-reverse items-center gap-2">
+
+                <div className="overflow-hidden flex flex-col-reverse items-center gap-5">
                     <motion.p
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
@@ -51,23 +51,8 @@ export const Hero = () => {
                         }}
                         className="text-sm md:text-lg md:tracking-widest mx-auto uppercase font-semibold"
                     >
-                        <Balancer>
-                            Hey! I'm Euger, a software developer.
-                        </Balancer>
+                        <Balancer>Based in Iloilo, Philippines</Balancer>
                     </motion.p>
-                    <TooltipProvider>
-                        <Tooltip>
-                            <TooltipTrigger>
-                                <motion.div
-                                    initial={{ y: -50, opacity: 0 }}
-                                    animate={{ y: 0, opacity: 1 }}
-                                    transition={{ delay: 0.2, duration: 0.5 }}
-                                    className="mr-7 md:mr-12"
-                                ></motion.div>
-                            </TooltipTrigger>
-                            <TooltipContent>Hello there! 👋</TooltipContent>
-                        </Tooltip>
-                    </TooltipProvider>
                 </div>
                 {/* Name and Title */}
                 <div className="max-w-5xl">
