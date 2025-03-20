@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { cn } from "@/lib/utils";
-import ThemeToggleButton from "./theme-toggle-button";
+import ThemeToggleButton from "./ui/theme-toggle-button";
 
 const menuItems = [
     { name: "Features", href: "#link" },
@@ -14,7 +14,7 @@ const menuItems = [
     { name: "About", href: "#link" },
 ];
 
-export const HeroHeader = () => {
+export default function HeaderSection() {
     const [menuState, setMenuState] = React.useState(false);
     const [isScrolled, setIsScrolled] = React.useState(false);
 
@@ -131,4 +131,4 @@ export const HeroHeader = () => {
             </nav>
         </header>
     );
-};
+}
