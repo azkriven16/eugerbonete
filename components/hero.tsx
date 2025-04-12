@@ -2,10 +2,14 @@ import { TextAnimate } from "@/components/magicui/text-animate";
 import Balancer from "react-wrap-balancer";
 import { ShimmerButton } from "./magicui/shimmer-button";
 import { BlurFade } from "./magicui/blur-fade";
+import Three from "./3d";
 
 export const Hero = () => {
     return (
-        <section className="min-h-screen p-4 flex flex-col items-center justify-center font-poppins">
+        <section className="relative min-h-screen p-4 flex flex-col items-center justify-center font-poppins">
+            <div className="absolute top-0 left-[-20%] right-0 bottom-0 z-40">
+                <Three />
+            </div>
             <div className="flex flex-col justify-center items-center gap-5">
                 <TextAnimate
                     animation="blurInUp"
