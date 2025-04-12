@@ -7,7 +7,7 @@ import Three from "./3d";
 export const Hero = () => {
     return (
         <section className="relative min-h-screen p-4 flex flex-col items-center justify-center font-poppins">
-            <div className="absolute top-0 left-[-20%] right-0 bottom-0 z-40">
+            <div className="absolute top-0 left-0 md:left-[-20%] right-0 bottom-[60%] md:bottom-0 md:block">
                 <Three />
             </div>
             <div className="flex flex-col justify-center items-center gap-5">
