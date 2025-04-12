@@ -6,16 +6,16 @@ import Three from "./3d";
 
 export const Hero = () => {
     return (
-        <section className="relative min-h-screen p-4 flex flex-col items-center justify-center font-poppins">
-            <div className="absolute top-0 left-0 md:left-[-20%] right-0 bottom-[60%] md:bottom-0 md:block">
+        <section className="min-h-screen p-4 flex flex-col items-center justify-center font-poppins">
+            <div className="absolute top-0 left-0 md:left-[50%] right-0 bottom-[40%] md:bottom-0 md:block">
                 <Three />
             </div>
-            <div className="flex flex-col justify-center items-center gap-5">
+            <div className="md:max-w-5xl space-y-5 md:space-y-6 mt-24 md:mt-0">
                 <TextAnimate
                     animation="blurInUp"
                     by="character"
                     once
-                    className="font-indie-flower self-end text-2xl md:text-3xl lg:text-4xl text-center text-muted-foreground"
+                    className="font-indie-flower self-end text-xl md:text-3xl lg:text-4xl text-left text-muted-foreground"
                 >
                     Kamusta' ka
                 </TextAnimate>
@@ -24,12 +24,23 @@ export const Hero = () => {
                         animation="blurInUp"
                         by="character"
                         once
-                        className="text-4xl font-bold md:text-5xl lg:text-6xl text-center max-w-4xl font-poppins"
+                        className="text-2xl font-bold md:text-5xl lg:text-6xl text-left md:max-w-4xl font-poppins"
                     >
                         Hey, I’m Euger, Web Developer & Designer
                     </TextAnimate>
                 </Balancer>
-
+                <TextAnimate
+                    animation="blurInUp"
+                    by="character"
+                    once
+                    className="text-muted-foreground md:text-xl md:max-w-2xl"
+                >
+                    Crafting seamless experiences and bold visuals. High school
+                    student by day, creative thinker, and aspiring innovator by
+                    night.
+                </TextAnimate>
+            </div>
+            {/* <div className="flex flex-col justify-center items-start gap-5">
                 <Balancer>
                     <TextAnimate
                         animation="blurInUp"
@@ -52,7 +63,7 @@ export const Hero = () => {
                         </span>
                     </ShimmerButton>
                 </BlurFade>
-            </div>
+            </div> */}
         </section>
     );
 };

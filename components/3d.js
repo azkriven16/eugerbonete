@@ -49,7 +49,7 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
         linearDamping: 2,
     };
     const { nodes, materials } = useGLTF("./tag.glb");
-    const texture = useTexture("./line.jpg");
+    const texture = useTexture("./name.png");
     const { width, height } = useThree((state) => state.size);
     const [curve] = useState(
         () =>

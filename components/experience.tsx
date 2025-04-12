@@ -43,7 +43,7 @@ export function Experience() {
                     <p className="text-lg font-semibold font-poppins text-muted-foreground">
                         2025 - Present
                     </p>
-                    <h3 className="text-lg font-semibold text-gray-900">
+                    <h3 className="text-lg font-semibold">
                         Finishing up my degree @
                     </h3>
                     <div>
@@ -52,6 +52,7 @@ export function Experience() {
                             alt=""
                             width={150}
                             height={150}
+                            className="dark:rounded-full"
                         />
                     </div>
                 </div>
@@ -60,7 +61,7 @@ export function Experience() {
                     <p className="text-lg font-semibold font-poppins text-muted-foreground">
                         2023 - 2024
                     </p>
-                    <h3 className="text-lg font-semibold text-gray-900">
+                    <h3 className="text-lg font-semibold">
                         Part-time Software Engineer at
                     </h3>
                     <div>
@@ -77,7 +78,7 @@ export function Experience() {
                     <p className="text-lg font-semibold font-poppins text-muted-foreground">
                         2021 - 2022
                     </p>
-                    <h3 className="text-lg font-semibold text-gray-900">
+                    <h3 className="text-lg font-semibold">
                         Software Engineer Intern at
                     </h3>
                     <div>
