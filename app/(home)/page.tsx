@@ -1,8 +1,9 @@
-import { Cta } from "@/components/cta";
+import { Testimonial } from "@/components/testimonial";
 import { Experience } from "@/components/experience";
 import { Hero } from "@/components/hero";
 import { Projects } from "@/components/projects";
 import { TechStack } from "@/components/tech-stack";
+import { Certifications } from "@/components/certifications";
 
 export default function Home() {
     return (
@@ -11,7 +12,8 @@ export default function Home() {
             <Projects />
             <Experience />
             <TechStack />
-            <Cta />
+            <Certifications />
+            <Testimonial />
         </main>
     );
 }

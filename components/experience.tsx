@@ -1,67 +1,56 @@
 import Balancer from "react-wrap-balancer";
 import { TextAnimate } from "./magicui/text-animate";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Experience() {
     return (
-        <section className="max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col gap-5 text-center">
+        <section className="max-w-5xl mx-auto py-16 p-4">
+            <div className="flex flex-col gap-5">
                 <TextAnimate
                     animation="blurInUp"
                     by="character"
                     once
-                    className="font-indie-flower self-start text-2xl md:text-3xl lg:text-4xl text-center text-muted-foreground"
+                    className="font-indie-flower text-2xl md:text-3xl lg:text-4xl text-center text-muted-foreground"
                 >
-                    Work Experience
+                    Timeline
                 </TextAnimate>
                 <Balancer>
                     <TextAnimate
                         animation="blurInUp"
                         by="character"
                         once
-                        className="text-3xl font-bold md:text-4xl lg:text-5xl text-center max-w-4xl font-poppins"
+                        className="text-2xl font-bold md:text-3xl lg:text-4xl font-poppins text-center"
                     >
-                        Some companies I've worked with.
-                    </TextAnimate>
-                </Balancer>
-                <Balancer>
-                    <TextAnimate
-                        animation="blurInUp"
-                        by="character"
-                        once
-                        className="text-muted-foreground text-2xl max-w-4xl text-center"
-                    >
-                        Crafting seamless experiences and bold visuals. High
-                        school student by day, creative thinker, and aspiring
-                        innovator by night.
+                        "Progress is made not by the first step, but by the step
+                        that follows."
                     </TextAnimate>
                 </Balancer>
             </div>
 
             <div className="space-y-12 mt-20 flex flex-col items-center justify-center">
-                <div className="flex gap-10 items-center justify-center">
-                    <p className="text-lg font-semibold font-poppins text-muted-foreground">
+                <div className="flex gap-10 items-center justify-between w-full">
+                    <p className="text-xs md:text-lg font-semibold font-poppins text-muted-foreground">
                         2025 - Present
                     </p>
-                    <h3 className="text-lg font-semibold">
-                        Finishing up my degree @
+                    <h3 className="text-xs md:text-lg font-semibold">
+                        Finishing up my degree at
                     </h3>
-                    <div>
-                        <Image
-                            src="/school.jpg"
-                            alt=""
-                            width={150}
-                            height={150}
-                            className="dark:rounded-full"
-                        />
-                    </div>
+                    <Link
+                        href="https://www.google.com/search?q=Northern+Iloilo+State+University&rlz=1C1FKPE_enPH1132PH1132&oq=northern+iloilo+state+university&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIMCAEQLhhDGIAEGIoFMg0IAhAAGJECGIAEGIoFMhMIAxAuGK8BGMcBGJECGIAEGIoFMg0IBBAuGK8BGMcBGIAEMgcIBRAAGIAEMgwIBhAAGBQYhwIYgAQyDQgHEC4YrwEYxwEYgAQyDQgIEC4YrwEYxwEYgAQyBwgJEAAYgATSAQgxMDc0ajBqOagCALACAQ&sourceid=chrome&ie=UTF-8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs md:text-lg font-semibold text-blue-500 hover:underline"
+                    >
+                        Northern Iloilo State University
+                    </Link>
                 </div>
 
-                <div className="flex gap-10 items-center justify-center">
-                    <p className="text-lg font-semibold font-poppins text-muted-foreground">
+                <div className="flex gap-10 items-center justify-between w-full">
+                    <p className="text-xs md:text-lg font-semibold font-poppins text-muted-foreground">
                         2023 - 2024
                     </p>
-                    <h3 className="text-lg font-semibold">
+                    <h3 className="text-xs md:text-lg font-semibold">
                         Part-time Software Engineer at
                     </h3>
                     <div>
@@ -74,11 +63,11 @@ export function Experience() {
                     </div>
                 </div>
 
-                <div className="flex gap-10 items-center justify-center">
-                    <p className="text-lg font-semibold font-poppins text-muted-foreground">
+                <div className="flex gap-10 items-center justify-between w-full">
+                    <p className="text-xs md:text-lg font-semibold font-poppins text-muted-foreground">
                         2021 - 2022
                     </p>
-                    <h3 className="text-lg font-semibold">
+                    <h3 className="text-xs md:text-lg font-semibold">
                         Software Engineer Intern at
                     </h3>
                     <div>
