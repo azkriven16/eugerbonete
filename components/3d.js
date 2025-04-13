@@ -16,6 +16,8 @@ import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 
 extend({ MeshLineGeometry, MeshLineMaterial });
+useGLTF.preload("./tag.glb");
+useTexture.preload("./name.png");
 
 export default function Three() {
     const { debug } = useControls({});
