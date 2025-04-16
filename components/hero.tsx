@@ -17,13 +17,13 @@ export const Hero = () => {
             <div className="absolute top-0 -z-20 h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] hidden dark:block"></div>
             {/* background */}
 
-            <div className="lg:max-w-5xl space-y-5 lg:space-y-6 mt-[20rem] md:mt-[25rem] lg:mt-0 lg:mr-20">
+            <div className="lg:max-w-5xl space-y-5 lg:space-y-6 mt-[15rem] md:mt-[18rem] lg:mt-0 lg:mr-20">
                 <Balancer>
                     <TextAnimate
                         animation="blurInUp"
                         by="character"
                         once
-                        className="text-2xl font-bold md:text-5xl lg:text-6xl/normal text-center lg:text-left lg:max-w-4xl font-poppins"
+                        className="text-2xl font-bold md:text-5xl lg:text-6xl/normal text-center lg:text-left lg:max-w-4xl font-poppins mix-blend-difference text-white"
                     >
                         a developer that ♥ to "Ctrl + Alt + Create"
                     </TextAnimate>
