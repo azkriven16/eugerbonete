@@ -68,7 +68,7 @@ const DATA = {
 
 export function Header() {
     return (
-        <div className="flex items-center justify-center sticky top-0 z-50 container mx-auto">
+        <div className="flex items-center justify-center sticky top-0 z-50 mx-auto px-4">
             <div className="hidden md:block">
                 <Location />
             </div>
