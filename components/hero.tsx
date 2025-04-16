@@ -4,16 +4,17 @@ import { ShimmerButton } from "./magicui/shimmer-button";
 import { BlurFade } from "./magicui/blur-fade";
 import Three from "./3d";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export const Hero = () => {
     return (
         <section className="min-h-[65vh] p-4 flex flex-col items-center justify-center">
-            <div className="absolute top-0 left-0 right-0 bottom-[40%] lg:bottom-0 lg:block z-10">
+            <div className="absolute top-0 left-0 right-0 bottom-[40%] lg:bottom-0 lg:block">
                 <Three />
             </div>
             {/* background */}
-            <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] dark:hidden"></div>
-            <div className="absolute top-0 -z-10 h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] hidden dark:block"></div>
+            <div className="absolute inset-0 -z-20 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] dark:hidden"></div>
+            <div className="absolute top-0 -z-20 h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] hidden dark:block"></div>
             {/* background */}
 
             <div className="lg:max-w-5xl space-y-5 lg:space-y-6 mt-[20rem] md:mt-[25rem] lg:mt-0 lg:mr-20">
@@ -41,14 +42,20 @@ export const Hero = () => {
                     className="flex gap-4 items-center justify-center lg:justify-start"
                 >
                     <Button variant="default" size="lg">
-                        <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight lg:text-lg">
+                        <Link
+                            href="/contact"
+                            className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight lg:text-lg"
+                        >
                             Contact me
-                        </span>
+                        </Link>
                     </Button>
                     <Button variant="secondary" size="lg">
-                        <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight lg:text-lg">
+                        <Link
+                            href="/contact"
+                            className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight lg:text-lg"
+                        >
                             See my work
-                        </span>
+                        </Link>
                     </Button>
                 </BlurFade>
             </div>
