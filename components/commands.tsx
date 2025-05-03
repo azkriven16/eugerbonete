@@ -1,14 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import {
-    Calculator,
-    Calendar,
     CreditCard,
+    File,
+    Files,
     Settings,
-    Smile,
-    User,
+    User
 } from "lucide-react";
+import { useEffect, useState } from "react";
 
 import {
     CommandDialog,
@@ -17,10 +16,12 @@ import {
     CommandInput,
     CommandItem,
     CommandList,
-    CommandSeparator,
-    CommandShortcut,
+    CommandSeparator
 } from "@/components/ui/command";
+import { RiGithubFill } from "react-icons/ri";
 import { Button } from "./ui/button";
+import { Email, Facebook, LinkedIn } from "./hero";
+import { VscGithub } from "react-icons/vsc";
 
 export function Commands() {
     const [open, setOpen] = useState(false);
@@ -39,9 +40,14 @@ export function Commands() {
 
     return (
         <>
-            <Button variant="outline" size='sm' onClick={() => setOpen((open) => !open)} className="mt-10">           
+            <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setOpen((open) => !open)}
+                className="mt-10"
+            >
                 <p className="text-sm text-muted-foreground">
-                Super-duper quick search...
+                    Super-duper quick links...
                 </p>
                 <p className="text-sm text-muted-foreground">
                     <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
@@ -50,39 +56,40 @@ export function Commands() {
                 </p>
             </Button>
             <CommandDialog open={open} onOpenChange={setOpen}>
-                <CommandInput placeholder="Type a command or search..." />
+                <CommandInput placeholder="Search for..." />
                 <CommandList>
                     <CommandEmpty>No results found.</CommandEmpty>
                     <CommandGroup heading="Suggestions">
                         <CommandItem>
-                            <Calendar />
-                            <span>Calendar</span>
+                            <File />
+                            <span>Resume</span>
                         </CommandItem>
                         <CommandItem>
-                            <Smile />
-                            <span>Search Emoji</span>
+                            <Files />
+                            <span>Certifications</span>
                         </CommandItem>
                         <CommandItem>
-                            <Calculator />
-                            <span>Calculator</span>
+                            <RiGithubFill />
+                            <span>Source Code</span>
                         </CommandItem>
                     </CommandGroup>
                     <CommandSeparator />
-                    <CommandGroup heading="Settings">
+                    <CommandGroup heading="Socials">
                         <CommandItem>
-                            <User />
-                            <span>Profile</span>
-                            <CommandShortcut>⌘P</CommandShortcut>
+                            <Email />
+                            <span>Email</span>
                         </CommandItem>
                         <CommandItem>
-                            <CreditCard />
-                            <span>Billing</span>
-                            <CommandShortcut>⌘B</CommandShortcut>
+                            <VscGithub />
+                            <span>Github</span>
                         </CommandItem>
                         <CommandItem>
-                            <Settings />
-                            <span>Settings</span>
-                            <CommandShortcut>⌘S</CommandShortcut>
+                            <Facebook />
+                            <span>Facebook</span>
+                        </CommandItem>
+                        <CommandItem>
+                            <LinkedIn />
+                            <span>LinkedIn</span>
                         </CommandItem>
                     </CommandGroup>
                 </CommandList>

@@ -13,7 +13,7 @@ import {
     SiVite,
 } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
-import { VscCode } from "react-icons/vsc";
+import { VscVscode } from "react-icons/vsc";
 
 export const TechStack = () => {
     return (
@@ -129,7 +129,7 @@ const tech = [
     },
     {
         text: "Vscode",
-        icon: VscCode,
+        icon: VscVscode,
     },
     {
         text: "Chatgpt",
