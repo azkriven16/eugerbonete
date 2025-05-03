@@ -39,7 +39,7 @@ export const Hero = () => {
                 initial={{ y: -50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="leading-relaxed md:text-2xl sansation-bold tracking-wide text-muted-foreground"
+                className="leading-relaxed md:text-xl sansation-regular tracking-wide text-muted-foreground"
             >
                 I'm a Web Designer, Music Artist & Photographer.
                 <br /> I spend most of time thinking about Tea.
@@ -99,7 +99,7 @@ function Socials() {
     );
 }
 
-const Facebook = ({ className = "" }: { className?: string }) => (
+export const Facebook = ({ className = "" }: { className?: string }) => (
     <svg
         className={className}
         viewBox="0 0 100 100"
@@ -134,7 +134,7 @@ const Facebook = ({ className = "" }: { className?: string }) => (
     </svg>
 );
 
-const LinkedIn = ({ className = "" }: { className?: string }) => (
+export const LinkedIn = ({ className = "" }: { className?: string }) => (
     <svg
         className={className}
         viewBox="0 0 100 100"
@@ -176,7 +176,7 @@ const LinkedIn = ({ className = "" }: { className?: string }) => (
     </svg>
 );
 
-const Email = ({ className = "" }: { className?: string }) => (
+export const Email = ({ className = "" }: { className?: string }) => (
     <svg
         viewBox="0 0 100 100"
         xmlns="http://www.w3.org/2000/svg"

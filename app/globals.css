@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+strong {
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+}
+
 .primary-font {
     font-family: "Cal Sans", sans-serif;
     font-weight: 400;
