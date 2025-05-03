@@ -1,41 +1,23 @@
 "use client";
 
-import * as React from "react";
-import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
 import { Button } from "@/components/ui/button";
-import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
+import { LuMoon, LuSun } from "react-icons/lu";
 
 export function ModeToggle() {
-    const { setTheme, resolvedTheme, theme } = useTheme();
-    const [isMounted, setIsMounted] = React.useState(false);
-
-    React.useEffect(() => {
-        setIsMounted(true);
-    }, []);
-
-    if (!isMounted) {
-        return null;
-    }
+    const { theme, setTheme } = useTheme();
 
     return (
-        <Tooltip>
-            <TooltipTrigger asChild>
-                <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={() =>
-                        setTheme(resolvedTheme === "dark" ? "light" : "dark")
-                    }
-                >
-                    {resolvedTheme === "dark" ? <Moon /> : <Sun />}
-                    <span className="sr-only">Toggle theme</span>
-                </Button>
-            </TooltipTrigger>
-            <TooltipContent>
-                {theme === "dark" ? "light mode" : "dark mode"}
-            </TooltipContent>
-        </Tooltip>
+        <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="[&_svg]:size-6 rounded-full"
+        >
+            <LuSun className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+            <LuMoon className="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            <span className="sr-only">Toggle theme</span>
+        </Button>
     );
 }
