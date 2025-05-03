@@ -8,7 +8,7 @@ import { TechStack } from "@/components/tech-stack";
 
 export default function AnimatedTabs() {
     return (
-        <div className="w-full mx-auto rounded-xl mt-10">
+        <div className="w-full mx-auto rounded-xl mt-8">
             <Tabs defaultValue="projects" className="w-full">
                 <TabsList className="grid grid-cols-4 my-8 w-fit bg-background">
                     <TabsTrigger value="projects">

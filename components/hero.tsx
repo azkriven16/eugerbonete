@@ -218,25 +218,25 @@ const socialLinks = [
     {
         href: "https://github.com/davidjohnsonellis",
         label: "GitHub",
-        icon: <VscGithub className="size-7" />,
+        icon: <VscGithub className="size-6" />,
         delay: 0.1,
     },
     {
         href: "mailto:your-email@example.com",
         label: "Email",
-        icon: <Email className="size-7" />,
+        icon: <Email className="size-6" />,
         delay: 0.2,
     },
     {
         href: "https://facebook.com/davidjohnsonellis",
         label: "Facebook",
-        icon: <Facebook className="size-7" />,
+        icon: <Facebook className="size-6" />,
         delay: 0.3,
     },
     {
         href: "https://facebook.com/davidjohnsonellis",
         label: "LinkedIn",
-        icon: <LinkedIn className="size-7" />,
+        icon: <LinkedIn className="size-6" />,
         delay: 0.3,
     },
 ];
