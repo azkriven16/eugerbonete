@@ -43,7 +43,9 @@ function ProjectCard({ project }: { project: (typeof mockProjects)[number] }) {
                         className="rounded-full hover:bg-primary hover:text-primary-foreground"
                         variant="outline"
                     >
-                        visit site
+                        <a href={project.url} target="_blank">
+                            visit site
+                        </a>
                     </Button>
                 </div>
                 <motion.img
