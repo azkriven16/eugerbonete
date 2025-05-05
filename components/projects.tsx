@@ -18,7 +18,7 @@ export const Projects = () => {
     );
 };
 
-function ProjectCard({ project }: { project: typeof mockProjects[number] }) {
+function ProjectCard({ project }: { project: (typeof mockProjects)[number] }) {
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,11 @@ function ProjectCard({ project }: { project: typeof mockProjects[number] }) {
         >
             <Card className="shadow-md p-5 flex flex-col md:flex-row gap-10 relative overflow-hidden max-w-2xl">
                 <div className="space-y-5">
-                    <Button variant="secondary">{project.logo}</Button>
+                    <img
+                        src={project.logo}
+                        alt={project.name}
+                        className="w-10 h-10"
+                    />
                     <h3 className="primary-font">{project.name}</h3>
                     <p className="sansation-regular max-w-60 text-sm text-muted-foreground">
                         {project.description}
@@ -48,7 +52,7 @@ function ProjectCard({ project }: { project: typeof mockProjects[number] }) {
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="md:absolute md:-right-60 md:top-10"
+                    className="md:absolute md:-right-72 md:top-10 border-2 shadow-md rounded-lg"
                 />
             </Card>
         </motion.div>
@@ -58,39 +62,29 @@ function ProjectCard({ project }: { project: typeof mockProjects[number] }) {
 const mockProjects = [
     {
         id: 1,
-        name: "Framer",
-        logo: "F",
+        name: "201 Manager",
+        logo: "https://201m.vercel.app/icon.svg",
         description:
-            "A true design canvas, not just a visual HTML editor. Framer is the website builder loved by designers worldwide.",
-        image: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "A comprehensive tool designed for managing 201 files of employees efficiently and effectively.",
+        image: "/bh.png",
         url: "https://framer.com",
     },
     {
         id: 2,
-        name: "Figma",
-        logo: "Fi",
+        name: "Paste2Image",
+        logo: "https://paste2image.vercel.app/icon.svg",
         description:
-            "The collaborative interface design tool that enables teams to work together on digital products.",
-        image: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600",
-        url: "https://figma.com",
+            "Paste your clipboard content and download it as a PNG. Built with Next.js, shadcn/ui, and Tailwind CSS.",
+        image: "/paste2image.png",
+        url: "https://paste2image.vercel.app/",
     },
     {
         id: 3,
-        name: "Webflow",
-        logo: "W",
+        name: "Case Converter",
+        logo: "https://casetransform.vercel.app/icon.svg",
         description:
-            "Design, build, and launch responsive websites visually while writing clean, semantic code for developers.",
-        image: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600",
-        url: "https://webflow.com",
-    },
-    {
-        id: 4,
-        name: "Sketch",
-        logo: "S",
-        description:
-            "The digital design toolkit that helps you craft beautiful interfaces with powerful collaborative features.",
-        image: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=600",
-        url: "https://sketch.com",
+            "Uppercase/Lowercase Tool Convert text to ALL CAPS, lowercase, Title Case, etc.",
+        image: "/case.png",
+        url: "https://casetransform.vercel.app/",
     },
 ];
-

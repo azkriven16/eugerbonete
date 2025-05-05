@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 export const About = () => {
     return (
         <motion.section
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ scale: 0.95 }}
+            whileInView={{ scale: 1 }}
             transition={{ duration: 0.5 }}
             className="md:p-8 p-4"
         >
             <motion.p
-                initial={{ x: -100 }}
-                whileInView={{ x: 0 }}
+                initial={{ y: 10 }}
+                whileInView={{ y: 0 }}
                 transition={{ duration: 0.5 }}
                 className="text-base md:text-lg leading-relaxed mb-4 text-muted-foreground"
             >
@@ -31,23 +31,27 @@ export const About = () => {
             </motion.p>
 
             <motion.p
-                initial={{ x: 100 }}
-                whileInView={{ x: 0 }}
+                initial={{ y: -10 }}
+                whileInView={{ y: 0 }}
                 transition={{ duration: 0.5 }}
                 className="text-base md:text-lg leading-relaxed text-muted-foreground"
             >
                 I started my coding journey in{" "}
-                <strong className="text-foreground">2021</strong>, and since then, I've been
-                honing my coding, skills, If you're interested,here is my
+                <strong className="text-foreground">2021</strong>, and since
+                then, I've been honing my coding, skills, If you're
+                interested,here is my
                 <a href="" className="text-blue-500 font-bold hover:underline">
-                {" "}resume{" "}
+                    {" "}
+                    resume{" "}
                 </a>
-                  and here are some
+                and here are some
                 <a href="" className="text-blue-500 font-bold hover:underline">
-                {" "}certifications{" "}
+                    {" "}
+                    certifications{" "}
                 </a>
-                that demonstrate my qualifications. When I'm not coding, you can find me{" "}
-                <em>biking through the city</em>, <em>getting lost in a book</em>, or{" "}
+                that demonstrate my qualifications. When I'm not coding, you can
+                find me <em>biking through the city</em>,{" "}
+                <em>getting lost in a book</em>, or{" "}
                 <em>competing with friends in online games</em>.
             </motion.p>
         </motion.section>
