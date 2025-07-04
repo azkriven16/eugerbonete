@@ -8,7 +8,7 @@ import { GripVertical } from "lucide-react";
 import Link from "next/link";
 export default function Home() {
     return (
-        <div className="flex flex-col max-w-3xl mx-auto p-4 my-10 gap-10 justify-between">
+        <section className="flex flex-col max-w-3xl mx-auto p-4 my-10 gap-10 justify-between">
             <div>
                 <h1 className="text-3xl md:text-4xl font-light leading-tight tracking-tight">
                     <span className="font-medium">
@@ -16,7 +16,7 @@ export default function Home() {
                     </span>{" "}
                     with care
                     <br />
-                    <span className="font-semibold bg-gradient-to-r from-gray-300 to-white text-transparent bg-clip-text">
+                    <span className="font-semibold text-muted-foreground">
                         modern code. timeless design.
                     </span>
                 </h1>
@@ -27,15 +27,11 @@ export default function Home() {
                 </p>
             </div>
             <div className="flex flex-col md:flex-row gap-5">
-                <HomeCard
-                    href="/works"
-                    title="Available"
-                    desc="Schedule a Call"
-                />
-                <HomeCard href="/works" title="Works" desc="See my works" />
-                <HomeCard href="/works" title="Works" desc="See my works" />
+                <HomeCard href="/works" title="Projects" desc="See my works" />
+                <HomeCard href="/contact" title="Contact" desc="Get in touch" />
+                <HomeCard href="/cv" title="Resume" desc="If you're curious" />
             </div>
-        </div>
+        </section>
     );
 }
 

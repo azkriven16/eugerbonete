@@ -21,17 +21,19 @@ import { cn } from "@/lib/utils";
 
 export default function Header() {
     return (
-        <header className="border-b">
+        <header className="border-b sticky top-0 bg-background z-50">
             <div className="flex max-w-3xl mx-auto gap-5 items-center p-4 justify-between">
                 <div className="flex items-center justify-center">
-                    <Avatar className="md:mr-5 mr-10">
-                        <AvatarImage src="https://github.com/shadcn.png" />
-                        <AvatarFallback>CN</AvatarFallback>
-                    </Avatar>
+                    <Link href="/">
+                        <Avatar className="md:mr-5 mr-10">
+                            <AvatarImage src="https://github.com/shadcn.png" />
+                            <AvatarFallback>CN</AvatarFallback>
+                        </Avatar>
+                    </Link>
                     <ul className="flex gap-5">
-                        <HeaderLink href="/" text="Works" />
-                        <HeaderLink href="/" text="Services" />
-                        <HeaderLink href="/" text="Github" />
+                        <HeaderLink href="/works" text="Works" />
+                        <HeaderLink href="/services" text="Services" />
+                        <HeaderLink href="/about" text="About" />
                         <NavDropdown className="hidden md:block" />
                     </ul>
                 </div>
@@ -44,8 +46,14 @@ export default function Header() {
 }
 
 function HeaderLink({ href, text }: { href: string; text: string }) {
+    const path = usePathname();
     return (
-        <li className="text-muted-foreground hover:text-foreground text-sm font-semibold">
+        <li
+            className={cn(
+                "text-muted-foreground hover:text-foreground text-sm font-semibold",
+                path === href && "text-foreground"
+            )}
+        >
             <Link href={href}>{text}</Link>
         </li>
     );
@@ -80,6 +88,7 @@ function NavDropdown({ className }: React.HTMLAttributes<HTMLDivElement>) {
 
 import React, { useState } from "react";
 import { toast } from "sonner"; // or your preferred toast library
+import { usePathname } from "next/navigation";
 
 const EmailCopyButton = ({ email = "example@email.com" }) => {
     const [isCopied, setIsCopied] = useState(false);

@@ -6,6 +6,7 @@ import { Banana } from "lucide-react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Footer from "@/components/footer";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -43,6 +44,7 @@ export default function RootLayout({
                     <SmoothCursor cursor={<Banana />} />
                     <Header />
                     <main>{children}</main>
+                    <Footer />
                 </ThemeProvider>
             </body>
         </html>
