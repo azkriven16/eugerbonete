@@ -25,13 +25,13 @@ export default function Services() {
                         className="border p-6 rounded-xl shadow-lg flex flex-col justify-between"
                     >
                         <div>
-                            <div className="mb-4 text-white">
+                            <div className="mb-4">
                                 <service.icon size={36} />
                             </div>
                             <h2 className="text-xl font-semibold mb-2">
                                 {service.title}
                             </h2>
-                            <p className="text-gray-400 text-sm mb-4">
+                            <p className="text-muted-foreground mb-4">
                                 {service.description}
                             </p>
                         </div>

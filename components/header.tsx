@@ -34,6 +34,7 @@ export default function Header() {
                         <HeaderLink href="/works" text="Works" />
                         <HeaderLink href="/services" text="Services" />
                         <HeaderLink href="/blog" text="Blog" />
+                        <HeaderLink href="/music" text="Music" />
                         <NavDropdown className="hidden md:block" />
                     </ul>
                 </div>
