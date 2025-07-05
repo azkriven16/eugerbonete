@@ -4,69 +4,69 @@ import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { GripVertical } from "lucide-react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import Image from "next/image";
 
-const projects = [
+const posts = [
     {
         title: "Skyline",
-        image: "/quiz.png",
+        image: "/blog/skyline.jpg",
         description: "Fullstack",
     },
     {
         title: "Quiz",
-        image: "/quiz.png",
+        image: "/blog/quiz.jpg",
         description: "Frontend",
     },
     {
         title: "Dashboard",
-        image: "/quiz.png",
+        image: "/blog/dashboard.jpg",
         description: "Backend",
     },
     {
         title: "Website",
-        image: "/quiz.png",
+        image: "/blog/website.jpg",
         description: "Frontend",
     },
 ];
 
-export default function Works() {
+export default function Blog() {
     return (
         <section className="w-full max-w-3xl mx-auto p-4 my-10 gap-10 min-h-screen">
             <h1 className="text-2xl md:text-3xl font-semibold leading-tight tracking-tight">
-                Projects
+                Blog
             </h1>
             <p className="text-lg font-light leading-tight tracking-tight mt-2 mb-10">
                 <span className="font-semibold text-muted-foreground">
-                    Selected clients projects from the past years.
+                    Selected articles from the past years.
                 </span>
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-4 mt-6">
-                {projects.map((project) => (
-                    <ProjectCard key={project.title} project={project} />
+                {posts.map((post) => (
+                    <PostCard key={post.title} post={post} />
                 ))}
             </div>
         </section>
     );
 }
 
-function ProjectCard({ project }: { project: (typeof projects)[number] }) {
+function PostCard({ post }: { post: (typeof posts)[number] }) {
     return (
         <Card className="border-none space-y-2">
-            <LazyLoadImage
-                alt={project.title}
-                effect="blur"
-                wrapperProps={{
-                    style: { transitionDelay: "0.1s" },
-                }}
-                src={project.image}
+            <Image
+                src={post.image}
+                alt={post.title}
                 className="rounded-sm"
+                width={500}
+                height={300}
             />
             <div className="flex justify-between">
-                <CardTitle className="flex gap-2">{project.title}</CardTitle>
+                <CardTitle className="flex gap-2">{post.title}</CardTitle>
                 <CardDescription className="flex items-center gap-2">
-                    {project.description}{" "}
+                    {post.description}{" "}
                     <GripVertical className="text-muted-foreground size-4" />
                 </CardDescription>
             </div>
         </Card>
     );
 }
+

@@ -33,7 +33,7 @@ export default function Header() {
                     <ul className="flex gap-5">
                         <HeaderLink href="/works" text="Works" />
                         <HeaderLink href="/services" text="Services" />
-                        <HeaderLink href="/about" text="About" />
+                        <HeaderLink href="/blog" text="Blog" />
                         <NavDropdown className="hidden md:block" />
                     </ul>
                 </div>
@@ -67,7 +67,6 @@ function NavDropdown({ className }: React.HTMLAttributes<HTMLDivElement>) {
                 <Ellipsis className="text-muted-foreground size-5" />
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-                <DropdownMenuItem>Blog</DropdownMenuItem>
                 <DropdownMenuItem>Stack</DropdownMenuItem>
                 <DropdownMenuItem>About</DropdownMenuItem>
                 <DropdownMenuItem>Contact</DropdownMenuItem>
