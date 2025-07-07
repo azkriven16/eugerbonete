@@ -58,11 +58,11 @@ export default function Footer() {
 
     return (
         <footer>
-       <div className="w-full max-w-3xl mx-auto p-4 my-10">
+            <div className="w-full max-w-3xl mx-auto p-4 my-10">
                 <h3 className="text-xl md:text-2xl font-semibold leading-tight tracking-tight">
                     Let's Connect
                 </h3>
-                <p className="text-lg font-light leading-tight tracking-tight mt-2 mb-10">
+                <p className="text-sm text-muted-foreground font-medium mt-2 mb-10">
                     Feel free to reach out through any of my social media
                     channels
                 </p>
@@ -99,7 +99,7 @@ export default function Footer() {
                         <div className="flex flex-col gap-4 w-full md:w-1/2 text-center md:text-left">
                             {" "}
                             {/* Centered text on mobile, left on larger screens */}
-                            <h2 className="text-2xl sm:text-2xl font-semibold text-white leading-tight">
+                            <h2 className="text-lg sm:text-xl font-semibold leading-tight font-mono italic text-muted-foreground">
                                 {" "}
                                 {/* Adjusted text size for responsiveness */}
                                 “Code is how I think.

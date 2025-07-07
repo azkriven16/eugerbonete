@@ -108,17 +108,10 @@ export default function TechStack() {
 
     return (
         <section className="w-full max-w-3xl mx-auto p-4 my-10 gap-10">
-            <Button
-                variant="ghost"
-                effect="expandIcon"
-                icon={ArrowRight}
-                iconPlacement="right"
-                className="text-lg border-l rounded-none hover:rounded-lg"
-            >
+            <h3 className="text-sm text-muted-foreground mb-2 font-medium">
                 Software Stack
-            </Button>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-4 mt-6 bg-secondary p-4 rounded-lg">
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-4 bg-secondary p-4 rounded-lg">
                 {displayedTechItems.map((item, index) => (
                     <TechStackCard
                         key={index}

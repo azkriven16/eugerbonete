@@ -1,31 +1,18 @@
-"use client";
-
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { toast } from "sonner";
-import { useState } from "react";
+import { getAllBlogs } from "@/db/queries";
+import { GripVertical } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import FakeEmailSubscription from "./fake-email";
 
-export default function DevDropFeature() {
-    const [email, setEmail] = useState("");
-
-    const handleSubscribe = () => {
-        const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
-        if (!email || !isValid) {
-            toast.error("Please enter a valid email address.");
-            return;
-        }
-
-        toast.success(`You're subscribed! Thank you! ${email}`);
-        setEmail("");
-    };
+export default async function DevDropFeature() {
+    const blogs = await getAllBlogs();
 
     return (
         <section className="flex flex-col max-w-3xl mx-auto p-4 my-10 gap-10 justify-between">
             <div className="flex flex-col md:flex-row">
                 {/* Image Section */}
-                <div className="w-full md:w-1/2 h-[300px] md:h-auto relative">
+                <div className="w-full md:w-1/2 h-[200px] sm:h-[300px] md:h-auto relative">
                     <Image
                         src="/me.png"
                         alt="Developer Workspace"
@@ -48,32 +35,30 @@ export default function DevDropFeature() {
                         drop.
                     </p>
 
-                    <div className="flex w-full items-center space-x-2">
-                        <Input
-                            type="email"
-                            placeholder="Your email address"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                        <Button onClick={handleSubscribe}>Subscribe</Button>
-                    </div>
-
-                    <div className="pt-4">
-                        <div className="text-sm text-muted-foreground mb-2 font-medium">
-                            My Dev Blogs
-                        </div>
-                        <div className="flex flex-wrap gap-2">
-                            <Button variant="secondary" size="sm">
-                                Top 10 React Tips
+                    <FakeEmailSubscription />
+                </div>
+            </div>
+            <div className="pt-4">
+                <h3 className="text-sm text-muted-foreground mb-2 font-medium">
+                    Latest Blogs
+                </h3>
+                <div className="flex flex-col flex-wrap gap-2">
+                    {blogs.map((blog) => (
+                        <Link
+                            key={blog.id}
+                            href={`/blog/${blog.id}`}
+                            className="max-w-full"
+                        >
+                            <Button
+                                variant="secondary"
+                                size="sm"
+                                className="max-w-full truncate overflow-hidden"
+                            >
+                                <GripVertical />{" "}
+                                <p className="truncate">{blog.title}</p>
                             </Button>
-                            <Button variant="secondary" size="sm">
-                                My VSCode Setup
-                            </Button>
-                            <Button variant="secondary" size="sm">
-                                Frontend Starter Packs
-                            </Button>
-                        </div>
-                    </div>
+                        </Link>
+                    ))}
                 </div>
             </div>
         </section>

@@ -8,17 +8,11 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 export default function Videos() {
     return (
         <section className="w-full max-w-3xl mx-auto p-4 my-10 gap-10">
-            <Button
-                variant="ghost"
-                effect="expandIcon"
-                icon={ArrowRight}
-                iconPlacement="right"
-                className="text-lg border-l rounded-none hover:rounded-lg"
-            >
+            <h3 className="text-sm text-muted-foreground mb-2 font-medium">
                 Recent Uploads
-            </Button>
+            </h3>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-4 mt-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-4">
                 <ProjectCard />
                 <ProjectCard />
                 <ProjectCard />

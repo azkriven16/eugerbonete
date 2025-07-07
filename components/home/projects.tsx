@@ -27,17 +27,10 @@ const projects = [
 export default function Projects() {
     return (
         <section className="w-full max-w-3xl mx-auto p-4 my-10 gap-10">
-            <Button
-                variant="ghost"
-                effect="expandIcon"
-                icon={ArrowRight}
-                iconPlacement="right"
-                className="text-lg border-l rounded-none hover:rounded-lg"
-            >
-                Latest Work
-            </Button>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-4 mt-6">
+            <h3 className="text-sm text-muted-foreground mb-2 font-medium">
+                Latest Works
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-4">
                 {projects.map((project) => (
                     <ProjectCard key={project.title} project={project} />
                 ))}
