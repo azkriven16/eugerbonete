@@ -136,7 +136,7 @@ function TechStackCard({ name, category, icon }: TechStackCardProps) {
         <div className="border-none flex bg-none gap-4 items-center p-2">
             {icon && <div className="flex-shrink-0">{icon}</div>}
             <div className="flex flex-col">
-                <CardTitle className="flex gap-2 text-lg font-semibold text-foreground">
+                <CardTitle className="flex gap-2 font-semibold text-foreground">
                     {name}
                 </CardTitle>
                 <CardDescription className="flex items-center gap-2 text-sm text-muted-foreground">

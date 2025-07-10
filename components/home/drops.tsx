@@ -14,7 +14,7 @@ export default async function DevDropFeature() {
                 {/* Image Section */}
                 <div className="w-full md:w-1/2 h-[200px] sm:h-[300px] md:h-auto relative">
                     <Image
-                        src="/me.png"
+                        src="/cat.png"
                         alt="Developer Workspace"
                         layout="fill"
                         objectFit="cover"

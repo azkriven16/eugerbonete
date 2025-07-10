@@ -26,7 +26,7 @@ export default function Header() {
                 <div className="flex items-center justify-center">
                     <Link href="/">
                         <Avatar className="md:mr-5 mr-10">
-                            <AvatarImage src="https://github.com/shadcn.png" />
+                            <AvatarImage src="https://github.com/azkriven16.png" />
                             <AvatarFallback>CN</AvatarFallback>
                         </Avatar>
                     </Link>
