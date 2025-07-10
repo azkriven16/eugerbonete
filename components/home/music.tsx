@@ -1,10 +1,3 @@
-"use client";
-
-import { Button } from "@/components/ui/button";
-import { Card, CardDescription, CardTitle } from "@/components/ui/card";
-import { ArrowRight, GripVertical } from "lucide-react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
 import LatestMusic from "../latest-music";
 export default function Music() {
     return (
