@@ -1,72 +1,24 @@
-"use client";
-
-import { Card, CardDescription, CardTitle } from "@/components/ui/card";
-import { GripVertical } from "lucide-react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import { ProjectCard } from "@/components/project-card";
+import { getAllProjects } from "@/db/queries";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
-const projects = [
-    {
-        title: "Skyline",
-        image: "/quiz.png",
-        description: "Fullstack",
-    },
-    {
-        title: "Quiz",
-        image: "/quiz.png",
-        description: "Frontend",
-    },
-    {
-        title: "Dashboard",
-        image: "/quiz.png",
-        description: "Backend",
-    },
-    {
-        title: "Website",
-        image: "/quiz.png",
-        description: "Frontend",
-    },
-];
-
-export default function Works() {
+export default async function Works() {
+    const projects = await getAllProjects();
     return (
         <section className="w-full max-w-3xl mx-auto p-4 my-10 gap-10 min-h-screen">
-            <h1 className="text-2xl md:text-3xl font-semibold leading-tight tracking-tight">
+            <h1 className="text-xl md:text-2xl font-semibold leading-tight tracking-tight">
                 Projects
             </h1>
-            <p className="text-lg font-light leading-tight tracking-tight mt-2 mb-10">
+            <p className="font-light leading-tight tracking-tight mt-2 mb-10">
                 <span className="font-semibold text-muted-foreground">
                     Selected clients projects from the past years.
                 </span>
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-4 mt-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-4 mt-6">
                 {projects.map((project) => (
-                    <ProjectCard key={project.title} project={project} />
+                    <ProjectCard key={project.id} project={project} />
                 ))}
             </div>
         </section>
-    );
-}
-
-function ProjectCard({ project }: { project: (typeof projects)[number] }) {
-    return (
-        <Card className="border-none space-y-2">
-            <LazyLoadImage
-                alt={project.title}
-                effect="blur"
-                wrapperProps={{
-                    style: { transitionDelay: "0.1s" },
-                }}
-                src={project.image}
-                className="rounded-sm"
-            />
-            <div className="flex justify-between">
-                <CardTitle className="flex gap-2">{project.title}</CardTitle>
-                <CardDescription className="flex items-center gap-2">
-                    {project.description}{" "}
-                    <GripVertical className="text-muted-foreground size-4" />
-                </CardDescription>
-            </div>
-        </Card>
     );
 }

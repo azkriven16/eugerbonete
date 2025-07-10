@@ -27,7 +27,7 @@ export default async function DevDropFeature() {
                     <div className="text-sm font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded-full w-fit">
                         Upcoming Drop
                     </div>
-                    <h2 className="text-2xl md:text-3xl font-semibold leading-snug">
+                    <h2 className="text-xl md:text-2xl font-semibold leading-snug">
                         Web Dev Kits & Workflow Tips
                     </h2>
                     <p className="text-muted-foreground text-base">

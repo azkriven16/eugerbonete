@@ -893,3 +893,157 @@ async function seed() {
 seed().catch((error) => {
     console.error("Error seeding database:", error);
 });
+
+// import { db } from "./index"; // Adjust import path as needed
+// import { projectsTable } from "./schema"; // Adjust import path as needed
+
+// const fakeProjects = [
+//     {
+//         name: "E-Commerce Platform",
+//         description:
+//             "A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, product catalog, shopping cart, payment integration, and admin dashboard. The platform supports multiple payment methods and provides real-time inventory management.",
+//         summary: "Modern e-commerce platform with complete shopping experience",
+//         image_url:
+//             "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
+//         gallery: [
+//             "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
+//             "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
+//             "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+//         ],
+//     },
+//     {
+//         name: "Task Management App",
+//         description:
+//             "A collaborative project management tool designed for teams. Built with Vue.js frontend and Express.js backend. Features include task creation, assignment, progress tracking, team collaboration, file sharing, and deadline notifications. Integrated with calendar systems and supports multiple project views.",
+//         summary: "Team-focused task management with collaboration features",
+//         image_url:
+//             "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop",
+//         gallery: [
+//             "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop",
+//             "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
+//             "https://images.unsplash.com/photo-1542626991-cbc4e32524cc?w=800&h=600&fit=crop",
+//         ],
+//     },
+//     {
+//         name: "Weather Dashboard",
+//         description:
+//             "A responsive weather application that provides real-time weather data and forecasts. Built with React and integrated with multiple weather APIs. Features include location-based weather, 7-day forecasts, weather maps, severe weather alerts, and historical data visualization with interactive charts.",
+//         summary: "Real-time weather data with forecasting and visualization",
+//         image_url:
+//             "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop",
+//         gallery: [
+//             "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop",
+//             "https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=800&h=600&fit=crop",
+//             "https://images.unsplash.com/photo-1594736797933-d0407ba7fe65?w=800&h=600&fit=crop",
+//         ],
+//     },
+//     {
+//         name: "Social Media Analytics",
+//         description:
+//             "A comprehensive analytics platform for social media management. Built with Python Django backend and React frontend. Tracks engagement metrics, audience demographics, content performance, and competitor analysis. Features automated reporting, sentiment analysis, and integration with major social platforms.",
+//         summary: "Advanced social media analytics and reporting platform",
+//         image_url:
+//             "https://images.unsplash.com/photo-1611262588024-d12430b98920?w=800&h=600&fit=crop",
+//         gallery: [
+//             "https://images.unsplash.com/photo-1611262588024-d12430b98920?w=800&h=600&fit=crop",
+//             "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+//             "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&h=600&fit=crop",
+//         ],
+//     },
+//     {
+//         name: "Recipe Sharing Platform",
+//         description:
+//             "A community-driven recipe sharing website where users can upload, rate, and share recipes. Built with Next.js and Supabase. Features include user profiles, recipe collections, nutritional information, cooking timers, shopping lists, and social features like comments and favorites.",
+//         summary: "Community platform for sharing and discovering recipes",
+//         image_url:
+//             "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop",
+//         gallery: [
+//             "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop",
+//             "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=800&h=600&fit=crop",
+//             "https://images.unsplash.com/photo-1547573854-74d2a71d0826?w=800&h=600&fit=crop",
+//         ],
+//     },
+//     {
+//         name: "Fitness Tracker",
+//         description:
+//             "A comprehensive fitness tracking application with workout planning and progress monitoring. Built with React Native for mobile and React for web. Features include workout routines, exercise library, progress photos, nutrition tracking, goal setting, and integration with wearable devices.",
+//         summary:
+//             "Complete fitness tracking with workout planning and progress monitoring",
+//         image_url:
+//             "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
+//         gallery: [
+//             "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
+//             "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop",
+//             "https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=800&h=600&fit=crop",
+//         ],
+//     },
+//     {
+//         name: "Learning Management System",
+//         description:
+//             "An educational platform for online courses and training programs. Built with Angular frontend and Node.js backend. Features include course creation, video streaming, quizzes, progress tracking, certificates, discussion forums, and integration with payment systems for course purchases.",
+//         summary:
+//             "Comprehensive online learning platform with course management",
+//         image_url:
+//             "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&h=600&fit=crop",
+//         gallery: [
+//             "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=800&h=600&fit=crop",
+//             "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&h=600&fit=crop",
+//             "https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=800&h=600&fit=crop",
+//         ],
+//     },
+//     {
+//         name: "Real Estate Portal",
+//         description:
+//             "A property listing and management platform for real estate agents and buyers. Built with React and Node.js with MongoDB. Features include property listings, advanced search filters, virtual tours, mortgage calculators, agent profiles, and integrated messaging system between buyers and sellers.",
+//         summary: "Full-featured real estate platform with property management",
+//         image_url:
+//             "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
+//         gallery: [
+//             "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
+//             "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+//             "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&h=600&fit=crop",
+//         ],
+//     },
+//     {
+//         name: "Inventory Management System",
+//         description:
+//             "A robust inventory management solution for businesses. Built with Vue.js frontend and Laravel backend. Features include stock tracking, automated reordering, barcode scanning, supplier management, sales analytics, and multi-location support. Includes mobile app for warehouse operations.",
+//         summary: "Enterprise inventory management with automated tracking",
+//         image_url:
+//             "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop",
+//         gallery: [
+//             "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop",
+//             "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&h=600&fit=crop",
+//             "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
+//         ],
+//     },
+//     {
+//         name: "Event Planning Platform",
+//         description:
+//             "A comprehensive event management platform for planners and attendees. Built with React and Firebase. Features include event creation, ticket sales, attendee management, venue booking, vendor coordination, schedule management, and real-time event updates with mobile notifications.",
+//         summary: "Complete event planning and management solution",
+//         image_url:
+//             "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop",
+//         gallery: [
+//             "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop",
+//             "https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=800&h=600&fit=crop",
+//             "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=600&fit=crop",
+//         ],
+//     },
+// ];
+
+// async function seedProjects() {
+//     try {
+//         console.log("Starting to seed projects...");
+
+//         // Insert fake projects
+//         await db.insert(projectsTable).values(fakeProjects);
+
+//         console.log(`Successfully seeded ${fakeProjects.length} projects!`);
+//     } catch (error) {
+//         console.error("Error seeding projects:", error);
+//     }
+// }
+
+// // Run the seed function
+// seedProjects();
