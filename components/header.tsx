@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
     DropdownMenu,
@@ -9,15 +8,13 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Check, Copy, Ellipsis, Moon, Sun } from "lucide-react";
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { Button } from "@/components/ui/button";
-import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
+import { Ellipsis, Github, Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import PortfolioChatbot from "./chatbot";
+import { Button } from "./ui/button";
 
 export default function Header() {
     return (
@@ -38,8 +35,11 @@ export default function Header() {
                     </ul>
                 </div>
                 <NavDropdown className="block md:hidden" />
-
-                <EmailCopyButton />
+                <Button size="sm" variant="secondary">
+                    <Github />
+                    <span className="hidden md:inline">Source</span>
+                </Button>
+                <PortfolioChatbot />
             </div>
         </header>
     );
@@ -93,54 +93,3 @@ function NavDropdown({ className }: React.HTMLAttributes<HTMLDivElement>) {
         </DropdownMenu>
     );
 }
-
-import React, { useState } from "react";
-import { toast } from "sonner"; // or your preferred toast library
-import { usePathname } from "next/navigation";
-
-const EmailCopyButton = ({ email = "example@email.com" }) => {
-    const [isCopied, setIsCopied] = useState(false);
-
-    const handleCopyEmail = async () => {
-        try {
-            await navigator.clipboard.writeText(email);
-            setIsCopied(true);
-            toast.success("Email copied to clipboard!");
-
-            // Reset icon after 2 seconds
-            setTimeout(() => {
-                setIsCopied(false);
-            }, 2000);
-        } catch (err) {
-            console.error("Failed to copy email:", err);
-            toast.error("Failed to copy email");
-        }
-    };
-
-    return (
-        <div className="hidden md:block">
-            <Tooltip>
-                <TooltipTrigger asChild>
-                    <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={handleCopyEmail}
-                        className="transition-all duration-200"
-                    >
-                        {isCopied ? (
-                            <Check className="text-green-500" />
-                        ) : (
-                            <Copy />
-                        )}
-                        <span className="text-muted-foreground hover:text-foreground text-xs font-semibold">
-                            E-Mail
-                        </span>
-                    </Button>
-                </TooltipTrigger>
-                <TooltipContent>
-                    <p>{isCopied ? "Email copied!" : "Copy email address"}</p>
-                </TooltipContent>
-            </Tooltip>
-        </div>
-    );
-};
