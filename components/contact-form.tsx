@@ -87,10 +87,10 @@ export default function ContactForm() {
         <div className="w-full mx-auto">
             <Card className="w-full">
                 <CardHeader>
-                    <CardTitle className="flex items-center gap-2 text-2xl">
+                    <div className="flex items-center gap-2">
                         <Mail className="h-6 w-6" />
-                        Contact
-                    </CardTitle>
+                        <span className="text-base md:text-lg">Contact</span>
+                    </div>
                 </CardHeader>
                 <CardContent>
                     <form

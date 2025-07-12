@@ -1,12 +1,12 @@
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import { Toaster } from "@/components/ui/sonner";
-import { Banana } from "lucide-react";
+import { PawPrint } from "lucide-react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Footer from "@/components/footer";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -41,7 +41,7 @@ export default function RootLayout({
                     disableTransitionOnChange
                 >
                     <Toaster richColors position="top-center" />
-                    <SmoothCursor cursor={<Banana />} />
+                    <SmoothCursor cursor={<PawPrint />} />
                     <Header />
                     <main>{children}</main>
                     <Footer />

@@ -25,10 +25,15 @@ export default async function WorkDetailsPage({
                     <p className=" mb-6">
                         The project you're looking for doesn't exist.
                     </p>
-                    <Link href="/works">
-                        <Button>
+                    <Link
+                        href="/works"
+                        className="inline-flex items-center gap-2  hover: transition-colors"
+                    >
+                        <Button variant="outline" className="group">
                             <ArrowLeft className="w-4 h-4" />
-                            Back to Projects
+                            <span className="text-xs text-muted-foreground group-hover:text-foreground">
+                                Back to Works
+                            </span>
                         </Button>
                     </Link>
                 </div>
@@ -52,10 +57,12 @@ export default async function WorkDetailsPage({
                     href="/works"
                     className="inline-flex items-center gap-2  hover: transition-colors"
                 >
-                    <ArrowLeft className="w-4 h-4" />
-                    <span className="text-xs text-muted-foreground">
-                        Back to Projects
-                    </span>
+                    <Button variant="outline" className="group">
+                        <ArrowLeft className="w-4 h-4" />
+                        <span className="text-xs text-muted-foreground group-hover:text-foreground">
+                            Back to Works
+                        </span>
+                    </Button>
                 </Link>
             </div>
 
@@ -109,7 +116,11 @@ export default async function WorkDetailsPage({
                 <div className="flex items-center gap-1">
                     {/* <Code className="w-4 h-4" /> */}
                     <span>
-                        {project.type === "frontend" ? "Frontend" : "Backend"}
+                        {project.type === "frontend"
+                            ? "Frontend"
+                            : project.type === "backend"
+                              ? "Backend"
+                              : "Fullstack"}
                     </span>
                 </div>
             </div>
@@ -125,7 +136,7 @@ export default async function WorkDetailsPage({
             {project.gallery && project.gallery.length > 1 && (
                 <div className="mb-8">
                     <div className="flex flex-col gap-4">
-                        {project.gallery.slice(1).map((imageUrl, index) => (
+                        {project.gallery.map((imageUrl, index) => (
                             <div
                                 key={index}
                                 className="relative aspect-video rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
