@@ -58,81 +58,85 @@ export default function Footer() {
 
     return (
         <footer>
-            <div className="w-full max-w-3xl mx-auto p-4 my-10">
-                <h3 className="text-xl md:text-2xl font-semibold leading-tight tracking-tight">
-                    Let's Connect
-                </h3>
-                <p className="text-sm text-muted-foreground font-medium mt-2 mb-10">
-                    Feel free to reach out through any of my social media
-                    channels
-                </p>
-                <div className="flex gap-4">
-                    <Button
-                        variant="outline"
-                        className="flex items-center gap-2"
-                    >
-                        <SiFacebook size={24} />
-                        <span>Facebook</span>
-                    </Button>
-                    <Button
-                        variant="outline"
-                        className="flex items-center gap-2"
-                    >
-                        <SiX size={24} />
-                        <span>X</span>
-                    </Button>
-                    <Button
-                        variant="outline"
-                        className="flex items-center gap-2"
-                    >
-                        <SiGmail size={24} />
-                        <span>Gmail</span>
-                    </Button>
-                </div>
-            </div>
             <div className="border-t">
                 <div className="w-full max-w-3xl mx-auto p-4 my-10">
-                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-10">
-                        {" "}
-                        {/* Adjusted gap for better mobile spacing */}
-                        {/* Left Section: Quote */}
-                        <div className="flex flex-col gap-4 w-full md:w-1/2 text-center md:text-left">
-                            {" "}
-                            {/* Centered text on mobile, left on larger screens */}
-                            <h2 className="text-lg sm:text-xl font-semibold leading-tight font-mono italic text-muted-foreground">
-                                {" "}
-                                {/* Adjusted text size for responsiveness */}
-                                “Code is how I think.
-                                <br /> Design is how I feel.”
-                            </h2>
+                    <h3 className="text-lg md:text-xl font-semibold leading-tight tracking-tight">
+                        Let's Connect
+                    </h3>
+                    <p className="text-sm text-muted-foreground font-medium mt-2 mb-10">
+                        Feel free to reach out through my phone or email
+                    </p>
+
+                    <div className="flex flex-col md:flex-row gap-4">
+                        <div className="flex items-center gap-2">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="lucide lucide-mail"
+                            >
+                                <rect
+                                    width="20"
+                                    height="16"
+                                    x="2"
+                                    y="4"
+                                    rx="2"
+                                />
+                                <path d="m22 7-10 5L2 7" />
+                            </svg>
+                            <a
+                                href="mailto:eugerbone@gmail.com"
+                                className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 underline"
+                            >
+                                eugerbone@gmail.com
+                            </a>
                         </div>
-                        {/* Right Section: Status and Links */}
-                        <div className="flex flex-col items-center md:items-end text-gray-400 text-sm gap-2 mt-8 md:mt-0 w-full md:w-auto">
-                            {" "}
-                            {/* Ensured full width on mobile, auto on desktop */}
-                            <div className="flex items-center gap-2">
-                                <span>
-                                    {status.text} {status.emoji}
-                                </span>
-                                <span className="mx-1">•</span>
-                                <span>Iloilo, PH</span>
-                                <span className="mx-1">•</span>
-                                <span>{iloiloTime}</span>
-                            </div>
-                            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mt-2">
-                                <a
-                                    href="#"
-                                    className="hover:text-white transition-colors duration-200"
-                                >
-                                    Source Code
-                                </a>
-                                <a
-                                    href="#"
-                                    className="hover:text-white transition-colors duration-200"
-                                >
-                                    Old Portfolio
-                                </a>
-                            </div>
+
+                        <div className="flex items-center gap-2">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="lucide lucide-phone"
+                            >
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                            <span className="text-neutral-700 dark:text-neutral-300">
+                                +63 994 204 5331
+                            </span>
+                        </div>
+
+                        <div className="flex items-center gap-2">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="lucide lucide-map-pin"
+                            >
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span className="text-neutral-700 dark:text-neutral-300">
+                                Carles, Iloilo, Philippines
+                            </span>
                         </div>
                     </div>
                 </div>

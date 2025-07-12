@@ -25,14 +25,14 @@ export default async function DevDropFeature() {
                 {/* Content Section */}
                 <div className="p-6 md:w-1/2 flex flex-col justify-center gap-4">
                     <div className="text-sm font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded-full w-fit">
-                        Upcoming Drop
+                        Newsletter
                     </div>
                     <h2 className="text-xl md:text-2xl font-semibold leading-snug">
-                        Web Dev Kits & Workflow Tips
+                        Stay updated with the latest news on web development
                     </h2>
                     <p className="text-muted-foreground text-base">
-                        Get notified when new dev tools, guides, and UI kits
-                        drop.
+                        Receive a monthly newsletter with the latest insights,
+                        tips, and resources on web development.
                     </p>
 
                     <FakeEmailSubscription />

@@ -1,57 +1,17 @@
-import React from "react";
+import { Badge, IconButton } from "@/components/home/about";
+import DevDropFeature from "@/components/home/drops";
 
-interface BadgeProps {
-    children: React.ReactNode;
-    className?: string;
-    href?: string;
-}
-
-export const Badge: React.FC<BadgeProps> = ({ children, className, href }) => {
-    const baseClasses = `inline-flex items-center rounded-full border px-2.5 py-0.5 text- transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200`;
-    const interactiveClasses = `hover:bg-neutral-200 dark:hover:bg-neutral-700 cursor-pointer`;
-
-    if (href) {
-        return (
-            <a
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`${baseClasses} ${interactiveClasses} ${className}`}
-            >
-                {children}
-            </a>
-        );
-    }
-
-    return <span className={`${baseClasses} ${className}`}>{children}</span>;
-};
-
-interface IconButtonProps {
-    children: React.ReactNode;
-    className?: string;
-    href: string;
-}
-
-export const IconButton: React.FC<IconButtonProps> = ({
-    children,
-    className,
-    href,
-}) => {
+export default function AboutPage() {
     return (
-        <a
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-8 w-8 bg-neutral-200 text-neutral-800 hover:bg-neutral-300 dark:bg-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-600 ${className}`}
-        >
-            {children}
-        </a>
-    );
-};
-
-export default function About() {
-    return (
-        <section className="w-full max-w-3xl mx-auto p-4 my-10 gap-10 font-sans">
+        <section className="w-full max-w-3xl mx-auto p-4 my-10 gap-10 min-h-screen">
+            <h1 className="text-xl md:text-2xl font-semibold leading-tight tracking-tight">
+                About Me 👨
+            </h1>
+            <p className="font-light leading-tight tracking-tight mt-2 mb-10">
+                <span className="font-semibold text-muted-foreground">
+                    Selected clients projects from the past years.
+                </span>
+            </p>
             <div className="w-full bg-white dark:bg-neutral-900 rounded-xl shadow-lg p-6 md:p-8 border border-gray-200 dark:border-neutral-700 mt-10">
                 <p className="text-lg md:text-xl text-neutral-800 dark:text-neutral-200 leading-relaxed">
                     Hi, I’m{" "}
@@ -73,10 +33,20 @@ export default function About() {
                 </p>
 
                 <p className="text-lg md:text-xl text-neutral-800 dark:text-neutral-200 leading-relaxed mt-6">
-                    I’m passionate about building clean, user-friendly
-                    interfaces and writing maintainable code. Whether it's
-                    frontend design or backend logic, I aim to create seamless
-                    digital experiences.
+                    I’m passionate about creating user-friendly interfaces and
+                    maintainable code. Whether it's frontend or backend, I
+                    strive for seamless experiences. I <strong>love</strong>{" "}
+                    ambitious projects and <em>collaborating</em> with talented
+                    individuals. <span className="italic">I value</span>{" "}
+                    <strong>quality</strong> and{" "}
+                    <span className="underline">usability</span>. I have
+                    completed my education in Information Technology and have
+                    worked as a software developer, web developer, and intern at
+                    various companies. I <strong>pride</strong> myself on being{" "}
+                    <em>reliable</em>, <span className="italic">proactive</span>
+                    , and <strong>results-driven</strong>. I{" "}
+                    <span className="underline">love</span> to{" "}
+                    <strong>learn</strong> and <em>improve</em> my skills.
                 </p>
 
                 <p className="mt-6 text-lg md:text-xl text-neutral-800 dark:text-neutral-200 leading-relaxed">
@@ -125,6 +95,8 @@ export default function About() {
                     to see my resume and past work.
                 </p>
             </div>
+
+            <DevDropFeature />
         </section>
     );
 }

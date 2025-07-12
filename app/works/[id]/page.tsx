@@ -1,4 +1,5 @@
 import { ProjectCard } from "@/components/project-card";
+import { ProjectGallery } from "@/components/project-gallery";
 import { Button } from "@/components/ui/button";
 import { getAllProjects, getProjectById } from "@/db/queries";
 import { ArrowLeft, ArrowRight, Github, Globe2 } from "lucide-react";
@@ -133,25 +134,10 @@ export default async function WorkDetailsPage({
             </div>
 
             {/* Project Gallery */}
-            {project.gallery && project.gallery.length > 1 && (
-                <div className="mb-8">
-                    <div className="flex flex-col gap-4">
-                        {project.gallery.map((imageUrl, index) => (
-                            <div
-                                key={index}
-                                className="relative aspect-video rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
-                            >
-                                <Image
-                                    src={imageUrl}
-                                    alt={`${project.name} screenshot ${index + 2}`}
-                                    fill
-                                    className="object-cover hover:scale-105 transition-transform duration-300"
-                                />
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            )}
+            <ProjectGallery
+                gallery={project.gallery || []}
+                projectName={project.name}
+            />
 
             <Link
                 href="/works"

@@ -111,7 +111,7 @@ export default function TechStack() {
             <h3 className="text-sm text-muted-foreground mb-2 font-medium">
                 Software Stack
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-4 bg-secondary p-4 rounded-lg">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-4 border-y p-4">
                 {displayedTechItems.map((item, index) => (
                     <TechStackCard
                         key={index}

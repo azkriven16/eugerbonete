@@ -29,7 +29,7 @@ export default function Header() {
                     </Link>
                     <ul className="flex gap-5">
                         <HeaderLink href="/works" text="Works" />
-                        <HeaderLink href="/services" text="Services" />
+                        <HeaderLink href="/about" text="About" />
                         <HeaderLink href="/blog" text="Blog" />
                         <NavDropdown className="hidden md:block" />
                     </ul>
@@ -71,7 +71,7 @@ function NavDropdown({ className }: React.HTMLAttributes<HTMLDivElement>) {
                     <Link href="/stack">Stack</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                    <Link href="/about">About</Link>
+                    <Link href="/services">Services</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                     <Link href="/contact">Contact</Link>
