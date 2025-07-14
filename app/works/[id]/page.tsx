@@ -1,8 +1,9 @@
+import { Badge } from "@/components/home/about";
 import { ProjectCard } from "@/components/project-card";
 import { ProjectGallery } from "@/components/project-gallery";
 import { Button } from "@/components/ui/button";
 import { getAllProjects, getProjectById } from "@/db/queries";
-import { ArrowLeft, ArrowRight, Github, Globe2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, Calendar, Github, Globe2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -85,7 +86,7 @@ export default async function WorkDetailsPage({
                         </Button>
                     </Link>
 
-                    <Link href={project.live_url} target="_blank">
+                    <Link href={project.github_url} target="_blank">
                         <Button size="sm" variant="outline" className="text-xs">
                             <Github />
                             <span className="text-muted-foreground">
@@ -103,7 +104,7 @@ export default async function WorkDetailsPage({
                         src={project.image_url}
                         alt={project.name}
                         fill
-                        className="object-cover"
+                        className="object-cover border"
                         priority
                     />
                 </div>
@@ -111,18 +112,24 @@ export default async function WorkDetailsPage({
 
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
                 <div className="flex items-center gap-1 font-semibold">
-                    {/* <Calendar className="w-4 h-4" /> */}
-                    <span>{formatDate(project.created_at!)}</span>
+                    <Calendar className="w-4 h-4" />
+                    <span>
+                        {new Intl.DateTimeFormat("en-US", {
+                            month: "short",
+                            year: "numeric",
+                        }).format(new Date(project.created_at!))}
+                    </span>
                 </div>
                 <div className="flex items-center gap-1">
-                    {/* <Code className="w-4 h-4" /> */}
-                    <span>
-                        {project.type === "frontend"
-                            ? "Frontend"
-                            : project.type === "backend"
-                              ? "Backend"
-                              : "Fullstack"}
-                    </span>
+                    <Badge>
+                        <span>
+                            {project.type === "frontend"
+                                ? "Frontend"
+                                : project.type === "backend"
+                                  ? "Backend"
+                                  : "Fullstack"}
+                        </span>
+                    </Badge>
                 </div>
             </div>
 
