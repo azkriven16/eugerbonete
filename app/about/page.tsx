@@ -72,7 +72,7 @@ export default function AboutPage() {
                     to stay in touch professionally,
                     <br />
                     or view my{" "}
-                    <IconButton href="https://example.com/resume.pdf">
+                    <IconButton href="http://eugerbonete.vercel.app/resume.pdf">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
