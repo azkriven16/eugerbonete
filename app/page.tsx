@@ -1,3 +1,4 @@
+import PortfolioChatbot from "@/components/chatbot";
 import ContactForm from "@/components/contact-form";
 import About from "@/components/home/about";
 import DevDropFeature from "@/components/home/drops";
@@ -18,6 +19,7 @@ export default function Page() {
             <div className="mx-auto max-w-3xl p-4">
                 <ContactForm />
             </div>
+            <PortfolioChatbot />
         </>
     );
 }

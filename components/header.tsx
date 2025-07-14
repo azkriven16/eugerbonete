@@ -13,12 +13,11 @@ import { Ellipsis, Github, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import PortfolioChatbot from "./chatbot";
 import { Button } from "./ui/button";
 
 export default function Header() {
     return (
-        <header className="border-b sticky top-0 bg-background z-50">
+        <header className="border-b sticky top-0 bg-secondary/80 z-50 backdrop-blur-md bg-opacity-70">
             <div className="flex max-w-3xl mx-auto gap-5 items-center p-4 justify-between">
                 <div className="flex items-center justify-center">
                     <Link href="/">
@@ -39,7 +38,6 @@ export default function Header() {
                     <Github />
                     <span className="hidden md:inline">Source</span>
                 </Button>
-                <PortfolioChatbot />
             </div>
         </header>
     );

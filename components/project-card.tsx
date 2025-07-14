@@ -6,7 +6,7 @@ import Link from "next/link";
 export function ProjectCard({ project }: { project: Project }) {
     return (
         <Link href={`/works/${project.id}`}>
-            <Card className="border-none space-y-2 p-2">
+            <Card className="border-none space-y-2 p-2 bg-secondary">
                 <Image
                     src={project.image_url}
                     alt={project.name}

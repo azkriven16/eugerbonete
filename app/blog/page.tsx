@@ -1,4 +1,5 @@
 import LatestMusic from "@/components/latest-music";
+import { Button } from "@/components/ui/button";
 import { Card, CardTitle } from "@/components/ui/card";
 import { getAllBlogs } from "@/db/queries";
 import { GripVertical } from "lucide-react";
@@ -19,8 +20,19 @@ export default async function Blog() {
             </p>
             <div className="flex flex-col gap-4 mt-6">
                 {posts.map((post) => (
-                    <Link key={post.id} href={`/blog/${post.id}`}>
-                        <PostCard post={post} />
+                    <Link
+                        key={post.id}
+                        href={`/blog/${post.id}`}
+                        className="max-w-full"
+                    >
+                        <Button
+                            variant="secondary"
+                            size="sm"
+                            className="max-w-full truncate overflow-hidden border"
+                        >
+                            <GripVertical />{" "}
+                            <p className="truncate">{post.title}</p>
+                        </Button>
                     </Link>
                 ))}
             </div>
@@ -37,26 +49,5 @@ export default async function Blog() {
                 <LatestMusic />
             </div>
         </section>
-    );
-}
-
-function PostCard({
-    post,
-}: {
-    post: {
-        id: number;
-        title: string;
-        content: string;
-        created_at: Date | null;
-        author_email: string;
-    };
-}) {
-    return (
-        <Card className="border-y-1 border-x-0 rounded-none py-2 space-y-2">
-            <div className="flex items-center gap-4">
-                <GripVertical className="text-muted-foreground size-4" />
-                <CardTitle className="flex gap-2">{post.title}</CardTitle>
-            </div>
-        </Card>
     );
 }

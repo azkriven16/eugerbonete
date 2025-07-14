@@ -52,7 +52,7 @@ export default async function DevDropFeature() {
                             <Button
                                 variant="secondary"
                                 size="sm"
-                                className="max-w-full truncate overflow-hidden"
+                                className="max-w-full truncate overflow-hidden border"
                             >
                                 <GripVertical />{" "}
                                 <p className="truncate">{blog.title}</p>

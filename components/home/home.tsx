@@ -6,25 +6,29 @@ import {
 } from "@/components/ui/card";
 import { GripVertical } from "lucide-react";
 import Link from "next/link";
+import Hero from "../hero";
 export default function Home() {
     return (
         <section className="flex flex-col max-w-3xl mx-auto p-4 my-10 gap-10 justify-between">
-            <div>
-                <h1 className="text-3xl md:text-4xl font-light leading-tight tracking-tight">
-                    <span className="font-medium">
-                        Crafting beautiful web apps 🌹
-                    </span>{" "}
-                    with care
-                    <br />
-                    <span className="font-semibold text-muted-foreground">
-                        modern code. timeless design.
-                    </span>
-                </h1>
-                <p className="mt-6 max-w-xl text-base md:text-lg text-muted-foreground text-gray-400">
-                    I specialize in frontend development with React, Next.js,
-                    and Tailwind. Focused on performance, accessibility, and
-                    clean design systems.
-                </p>
+            <div className="flex flex-col md:flex-row gap-5">
+                <Hero />
+                <div>
+                    <h1 className="text-2xl md:text-3xl font-light leading-tight tracking-tight">
+                        <span className="font-medium">
+                            Frontend Developer 🥀
+                        </span>{" "}
+                        with meticulous attention
+                        <br />
+                        <span className="font-semibold text-muted-foreground">
+                            cutting-edge code. enduring design.
+                        </span>
+                    </h1>
+                    <p className="mt-6 max-w-xl text-base md:text-lg text-muted-foreground text-gray-400">
+                        I specialize in frontend development with React,
+                        Next.js, and Tailwind. Focused on performance,
+                        accessibility, and clean design systems.
+                    </p>
+                </div>
             </div>
             <div className="flex flex-col md:flex-row gap-5">
                 <HomeCard href="/works" title="Projects" desc="See my works" />

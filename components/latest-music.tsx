@@ -47,7 +47,7 @@ function VideoCard({ data }: { data: any }) {
             href={`https://www.youtube.com/watch?v=${data.snippet.resourceId.videoId}`}
             target="_blank"
         >
-            <Card className="border-none space-y-2 p-2">
+            <Card className="border-none space-y-2 p-2 bg-secondary">
                 <Image
                     alt={data.snippet.title}
                     src={data.snippet.thumbnails.medium.url}
