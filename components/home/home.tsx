@@ -13,7 +13,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row gap-5">
                 <Hero />
                 <div>
-                    <h1 className="text-2xl md:text-3xl font-light leading-tight tracking-tight">
+                    <h1 className="text-2xl md:text-3xl font-light leading-tight tracking-tight text-center sm:text-left">
                         <span className="font-medium">
                             Frontend Developer 🥀
                         </span>{" "}
