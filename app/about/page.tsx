@@ -51,7 +51,7 @@ export default function AboutPage() {
 
                 <p className="mt-6 text-lg md:text-xl text-neutral-800 dark:text-neutral-200 leading-relaxed">
                     Connect with me on{" "}
-                    <IconButton href="https://linkedin.com/in/yourprofile">
+                    <IconButton href="https://www.linkedin.com/in/euger-bonete/">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
