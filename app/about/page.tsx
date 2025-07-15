@@ -13,7 +13,7 @@ export default function AboutPage() {
                 </span>
             </p>
             <div className="w-full bg-white dark:bg-neutral-900 rounded-xl shadow-lg p-6 md:p-8 border border-gray-200 dark:border-neutral-700 mt-10">
-                <p className="text-lg md:text-xl text-neutral-800 dark:text-neutral-200 leading-relaxed">
+                <p className="text-xs sm:text-lg md:text-xl text-neutral-800 dark:text-neutral-200 leading-relaxed">
                     Hi, I’m{" "}
                     <span className="inline-flex items-center">
                         <img
@@ -32,7 +32,7 @@ export default function AboutPage() {
                     scalable backends.
                 </p>
 
-                <p className="text-lg md:text-xl text-neutral-800 dark:text-neutral-200 leading-relaxed mt-6">
+                <p className="text-xs sm:text-lg md:text-xl text-neutral-800 dark:text-neutral-200 leading-relaxed mt-6">
                     I’m passionate about creating user-friendly interfaces and
                     maintainable code. Whether it's frontend or backend, I
                     strive for seamless experiences. I <strong>love</strong>{" "}
@@ -49,7 +49,7 @@ export default function AboutPage() {
                     <strong>learn</strong> and <em>improve</em> my skills.
                 </p>
 
-                <p className="mt-6 text-lg md:text-xl text-neutral-800 dark:text-neutral-200 leading-relaxed">
+                <p className="mt-6 text-xs sm:text-lg md:text-xl text-neutral-800 dark:text-neutral-200 leading-relaxed">
                     Connect with me on{" "}
                     <IconButton href="https://www.linkedin.com/in/euger-bonete/">
                         <svg

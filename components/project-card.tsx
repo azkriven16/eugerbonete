@@ -12,7 +12,7 @@ export function ProjectCard({ project }: { project: Project }) {
                     alt={project.name}
                     width={300}
                     height={200}
-                    className="aspect-video object-cover rounded-lg"
+                    className="aspect-video object-cover rounded-lg w-full"
                 />
                 <div className="flex justify-between">
                     <CardTitle className="flex gap-2 truncate text-sm">
