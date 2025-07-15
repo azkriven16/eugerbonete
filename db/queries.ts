@@ -1,4 +1,4 @@
-import { eq } from "drizzle-orm";
+import { desc, eq } from "drizzle-orm";
 import { db } from "./index";
 import { blogsTable, projectsTable } from "./schema";
 
@@ -16,7 +16,11 @@ export async function getBlogById(id: number) {
 }
 
 export async function getAllProjects() {
-    return await db.select().from(projectsTable).execute();
+    return await db
+        .select()
+        .from(projectsTable)
+        .orderBy(desc(projectsTable.created_at))
+        .execute();
 }
 
 export async function getProjectById(id: number) {

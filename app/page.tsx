@@ -14,7 +14,7 @@ export default function Page() {
             <DevDropFeature />
             <Projects />
             <About />
-            <Music />
+            {/* <Music /> */}
             <TechStack />
             <div className="mx-auto max-w-3xl p-4">
                 <ContactForm />

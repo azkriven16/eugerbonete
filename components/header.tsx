@@ -34,10 +34,15 @@ export default function Header() {
                     </ul>
                 </div>
                 <NavDropdown className="block md:hidden" />
-                <Button size="sm" variant="secondary">
-                    <Github />
-                    <span className="hidden md:inline">Source</span>
-                </Button>
+                <Link
+                    href="https://github.com/azkriven16/eugerbonete"
+                    target="_blank"
+                >
+                    <Button size="sm" variant="secondary">
+                        <Github />
+                        <span className="hidden md:inline">Source</span>
+                    </Button>
+                </Link>
             </div>
         </header>
     );
@@ -74,9 +79,9 @@ function NavDropdown({ className }: React.HTMLAttributes<HTMLDivElement>) {
                 <DropdownMenuItem asChild>
                     <Link href="/contact">Contact</Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem asChild>
+                {/* <DropdownMenuItem asChild>
                     <Link href="/music">Music</Link>
-                </DropdownMenuItem>
+                </DropdownMenuItem> */}
                 <DropdownMenuSeparator />
                 <DropdownMenuItem
                     onClick={() =>
